@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:gluestack_demo/provider/theme_provider.dart';
+import 'package:gluestack_demo/screens/tutor_profile_screen.dart';
 import 'package:gluestack_demo/screens/user_profile_screen.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -15,16 +22,16 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
       title: 'Gluestack Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: $GSColors.purple900),
-        useMaterial3: true,
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: Provider.of<ThemeProvider>(context).themeMode,
       home: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -50,11 +57,11 @@ class _MyAppState extends State<MyApp> {
           ),
           GestureDetector(
             onTap: () {
-              // navigatorKey.currentState!.push(
-              //   MaterialPageRoute(
-              //     builder: (context) => const TutorProfileScreen(),
-              //   ),
-              // );
+              navigatorKey.currentState!.push(
+                MaterialPageRoute(
+                  builder: (context) => const TutorProfileScreen(),
+                ),
+              );
             },
             child: const Text(
               'Tutor Profile Screen',

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/user_profile_content_screen.dart';
+import 'package:gluestack_demo/screens/tutor_profile_content_screen.dart';
 import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/profile_drawer_widget.dart';
-import 'package:gluestack_demo/widgets/profile_topbar_widget.dart';
+import 'package:gluestack_demo/widgets/custom_drawer_widget.dart';
+import 'package:gluestack_demo/widgets/custom_topbar_widget.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
 
 class TutorProfileScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _TutorProfileScreenState extends State<TutorProfileScreen> {
         child: GSVStack(
           children: [
             // Tutor Profile Top Bar
-            ProfileTopBarWidget(
+            CustomTopBarWidget(
               profileImageUrl: GSStringConstants.kTutorImageUrl,
               trailingIcon: Icons.nightlight_rounded,
             ),
@@ -30,13 +30,17 @@ class _TutorProfileScreenState extends State<TutorProfileScreen> {
                   //Tutor Profile Side Drawer
                   Flexible(
                     flex: 2,
-                    child: ProfileDrawerWidget(),
+                    child: CustomDrawerWidget(
+                      profileImageUrl: GSStringConstants.kTutorImageUrl,
+                      userEmail: 'raxmartin@mydomain.com',
+                      userName: 'Rax Martin',
+                    ),
                   ),
 
                   //User Profile Main Content
                   Flexible(
                     flex: 9,
-                    child: UserProfileContentScreen(),
+                    child: TutorProfileContentScreen(),
                   ),
                 ],
               ),

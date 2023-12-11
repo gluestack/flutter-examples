@@ -11,36 +11,35 @@ class UserProfileContentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        padding: const EdgeInsets.only(top: 30),
+        padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.02),
         color: const Color(0xFFF5F3FF),
       ),
-      child: const GSVStack(
+      child: GSVStack(
         children: [
-          Align(
-            alignment: Alignment.topCenter,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 140.0, bottom: 15),
-                  child: GSHStack(
-                    children: [
-                      GSButtonIcon(
-                        icon: Icons.arrow_back,
-                        iconSize: GSSizes.$md,
-                      ),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      GSText(
-                        text: "Profile",
-                        size: GSSizes.$sm,
-                      )
-                    ],
-                  ),
+          Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * 0.14, bottom: 8),
+                //  bottom: MediaQuery.of(context).size.width * 0.1),
+                child: const GSHStack(
+                  children: [
+                    GSButtonIcon(
+                      icon: Icons.arrow_back,
+                      iconSize: GSSizes.$md,
+                    ),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    GSText(
+                      text: "Profile",
+                      size: GSSizes.$sm,
+                    )
+                  ],
                 ),
-                UserProfileForm(),
-              ],
-            ),
+              ),
+              const UserProfileForm(),
+            ],
           ),
         ],
       ),

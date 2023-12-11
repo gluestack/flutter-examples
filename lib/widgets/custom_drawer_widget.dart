@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:gluestack_demo/utils/constants.dart';
 import 'package:gluestack_demo/widgets/user_profile_side_drawer_tile.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
 
-class ProfileDrawerWidget extends StatelessWidget {
-  const ProfileDrawerWidget({
+class CustomDrawerWidget extends StatelessWidget {
+  final String profileImageUrl;
+  final String userName;
+  final String userEmail;
+  const CustomDrawerWidget({
     super.key,
+    required this.profileImageUrl,
+    required this.userName,
+    required this.userEmail,
   });
 
   @override
@@ -15,9 +20,9 @@ class ProfileDrawerWidget extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const GSCenter(
+        GSCenter(
           child: GSImage(
-            path: GSStringConstants.kImageUrl,
+            path: profileImageUrl,
             imageType: GSImageType.network,
             borderRadius: GSBorderRadius.$full,
             size: GSSizes.$lg,
@@ -29,7 +34,7 @@ class ProfileDrawerWidget extends StatelessWidget {
         ),
         GSCenter(
           child: GSText(
-            text: "Jane Doe",
+            text: userName,
             style: GSStyle(
               //fontWeight: FontWeight.w900,
               textStyle: const TextStyle(fontWeight: FontWeight.w900),
@@ -41,7 +46,7 @@ class ProfileDrawerWidget extends StatelessWidget {
         ),
         GSCenter(
           child: GSText(
-            text: "janedoe2@mydomain.com",
+            text: userEmail,
             size: GSSizes.$xs,
             style: GSStyle(
               textStyle: const TextStyle(color: $GSColors.warmGray400),
@@ -87,6 +92,9 @@ class ProfileDrawerWidget extends StatelessWidget {
         const UserProfileSideDrawerTile(
           icon: Icons.share,
           label: "Refer & Earn",
+        ),
+        const SizedBox(
+          height: 30,
         ),
         GSDivider(
           orientation: GSOrientations.vertical,
