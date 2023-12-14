@@ -18,10 +18,11 @@ class SellerDetailsContentScreen extends StatelessWidget {
           dark: GSStyle(isVisible: true)),
       child: GSVStack(
         children: [
-          Padding(
-            padding: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * 0.23, bottom: 8),
-            //  bottom: MediaQuery.of(context).size.width * 0.1),
+          GSBox(
+            style: GSStyle(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.23, bottom: 8),
+            ),
             child: const CustomBackButton(
               buttonText: "Cool Store",
             ),
@@ -37,25 +38,20 @@ class SellerDetailsContentScreen extends StatelessWidget {
               child: GSHStack(children: [
                 Flexible(
                   flex: 8,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.035,
-                    ),
-                    child: GSBox(
-                      style: GSStyle(
-                          color: const Color(0xFFF5F3FF),
-                          borderRadius: 3.5,
-                          width: MediaQuery.of(context).size.width * 0.25,
-                          height: MediaQuery.of(context).size.height * 0.7,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 6, vertical: 6)),
-                      child: const GSImage(
-                        size: GSSizes.$md,
-                        fit: BoxFit.fill,
-                        path:
-                            "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                        imageType: GSImageType.network,
-                      ),
+                  child: GSBox(
+                    style: GSStyle(
+                        color: const Color(0xFFF5F3FF),
+                        borderRadius: 3.5,
+                        width: MediaQuery.of(context).size.width * 0.25,
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 6)),
+                    child: const GSImage(
+                      size: GSSizes.$md,
+                      fit: BoxFit.fill,
+                      path:
+                          "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                      imageType: GSImageType.network,
                     ),
                   ),
                 ),

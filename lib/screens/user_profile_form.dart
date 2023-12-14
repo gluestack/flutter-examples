@@ -79,8 +79,10 @@ class _UserProfileFormState extends State<UserProfileForm> {
                           style: GSStyle(
                               color: Theme.of(context).colorScheme.primary),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
+                        GSBox(
+                          style: GSStyle(
+                            padding: const EdgeInsets.only(left: 5),
+                          ),
                           child: GSButtonText(
                             text: 'Edit Profile',
                             style: GSStyle(

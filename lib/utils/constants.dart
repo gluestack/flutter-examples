@@ -4,6 +4,11 @@ class GSStringConstants {
 
   static const String kUserEmail = 'janedoe@@mydomain.com';
   static const String kUserName = 'Jane Doe';
+  static const String kProfile = 'Profile';
+  static const String kTutorProfile = 'Tutor Profile';
+
+  static const String kTutorEmail = 'raxmartin@mydomain.com';
+  static const String kTutorName = 'Rax Martin';
 
   static const String kTutorImageUrl =
       "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -27,6 +32,12 @@ class GSStringConstants {
     'https://images.unsplash.com/photo-1682686578601-e7851641d52c?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'https://plus.unsplash.com/premium_photo-1680667682187-52fd5e203efb?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'https://images.unsplash.com/photo-1701695318246-2d48c7f1cc63?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  ];
+
+  static List<String> kTutorUserProfile = [
+    "Rax Martin",
+    "California",
+    "A user profile is a collection of settings and info of a user. It contains \n critical information that is used to identify an individual"
   ];
 
   static List<String> postTitles = [

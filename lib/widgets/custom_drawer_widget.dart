@@ -64,7 +64,7 @@ class CustomDrawerWidget extends StatelessWidget {
               text: userEmail,
               size: GSSizes.$xs,
               style: GSStyle(
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                   color: $GSColors.warmGray400,
                 ),
               ),
@@ -118,7 +118,9 @@ class CustomDrawerWidget extends StatelessWidget {
           GSDivider(
             orientation: GSOrientations.vertical,
             style: GSStyle(
-                color: $GSColors.warmGray400.withOpacity(0.15), height: 1.3),
+              color: $GSColors.warmGray400.withOpacity(0.15),
+              height: 1.3,
+            ),
           ),
           const UserProfileSideDrawerTile(
             icon: Icons.logout,

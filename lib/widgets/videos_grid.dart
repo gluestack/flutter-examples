@@ -23,15 +23,9 @@ class _VideosGridState extends State<VideosGrid> {
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        print(constraints.maxWidth);
+        print("MAX WIDTH ${constraints.maxWidth}");
 
-        if (constraints.maxWidth < 450) {
-          crossAxisCount = 2;
-        } else if (constraints.maxWidth < 605) {
-          crossAxisCount = 3;
-        } else {
-          crossAxisCount = 4;
-        }
+        int crossAxisCount = calculateCrossAxisCount(constraints);
 
         return GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -48,5 +42,15 @@ class _VideosGridState extends State<VideosGrid> {
         );
       },
     );
+  }
+
+  int calculateCrossAxisCount(BoxConstraints constraints) {
+    if (constraints.maxWidth < 448) {
+      return 2;
+    } else if (constraints.maxWidth < 605) {
+      return 3;
+    } else {
+      return 4;
+    }
   }
 }

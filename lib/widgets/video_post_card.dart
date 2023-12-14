@@ -10,6 +10,7 @@ class VideoPostCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
+        height: 200,
         color: $GSColors.warmGray100,
         borderRadius: 5,
       ),
@@ -26,7 +27,7 @@ class VideoPostCard extends StatelessWidget {
             child: GSBox(
               style: GSStyle(
                 padding: const EdgeInsets.only(
-                  top: 10,
+                  top: 8,
                 ),
               ),
               child: GSText(
