@@ -20,15 +20,13 @@ class VideoPostCard extends StatelessWidget {
             path: post.imageUrl,
             imageType: GSImageType.network,
             fit: BoxFit.cover,
-            style: GSStyle(
-              height: 110,
-            ),
+            style: GSStyle(height: 120),
           ),
           GSCenter(
             child: GSBox(
               style: GSStyle(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 6,
+                padding: const EdgeInsets.only(
+                  top: 10,
                 ),
               ),
               child: GSText(

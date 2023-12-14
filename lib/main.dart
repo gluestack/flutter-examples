@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gluestack_demo/provider/theme_provider.dart';
+import 'package:gluestack_demo/screens/seller_details_screen.dart';
 import 'package:gluestack_demo/screens/tutor_profile_screen.dart';
 import 'package:gluestack_demo/screens/user_profile_screen.dart';
 import 'package:provider/provider.dart';
@@ -47,8 +48,10 @@ class _MyAppState extends State<MyApp> {
             child: const Text(
               'User Profile Screen',
               style: TextStyle(
+                decoration: TextDecoration.none,
                 fontSize: 20,
-                color: Colors.blue,
+                color: Color.fromARGB(255, 4, 65, 116),
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -66,8 +69,31 @@ class _MyAppState extends State<MyApp> {
             child: const Text(
               'Tutor Profile Screen',
               style: TextStyle(
+                decoration: TextDecoration.none,
                 fontSize: 20,
-                color: Colors.blue,
+                color: Color.fromARGB(255, 4, 65, 116),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          GestureDetector(
+            onTap: () {
+              navigatorKey.currentState!.push(
+                MaterialPageRoute(
+                  builder: (context) => const SellerDetailsScreen(),
+                ),
+              );
+            },
+            child: const Text(
+              'Seller Details Screen',
+              style: TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: 20,
+                color: Color.fromARGB(255, 4, 65, 116),
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),

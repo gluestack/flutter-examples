@@ -14,7 +14,8 @@ class UserProfileSideDrawerTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       dense: true,
-      contentPadding: const EdgeInsets.only(left: 25),
+      contentPadding:
+          EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.020),
       leading: GSIcon(
         icon: icon,
         size: GSSizes.$md,

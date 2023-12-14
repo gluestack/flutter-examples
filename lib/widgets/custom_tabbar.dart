@@ -38,13 +38,13 @@ class CustomTabBar extends StatelessWidget {
               height: 10,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.34,
+              height: MediaQuery.of(context).size.height * 0.38,
               child: const TabBarView(
                 children: [
                   VideosGrid(),
                   GSCenter(
                     child: GSText(
-                      text: 'Documents section',
+                      text: 'Documents Section',
                     ),
                   ),
                   GSCenter(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gluestack_demo/utils/constants.dart';
+import 'package:gluestack_demo/widgets/custom_back_button_widget.dart';
 import 'package:gluestack_demo/widgets/custom_tabbar.dart';
 import 'package:gluestack_demo/widgets/followers_count_tile.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
@@ -11,39 +12,31 @@ class TutorProfileContentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GSBox(
-      style: GSStyle(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.02),
-        color: const Color(0xFFF5F3FF),
-      ),
-      child: GSVStack(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * 0.14, bottom: 8),
-            //  bottom: MediaQuery.of(context).size.width * 0.1),
-            child: const GSHStack(
-              children: [
-                GSButtonIcon(
-                  icon: Icons.arrow_back,
-                  iconSize: GSSizes.$md,
-                ),
-                SizedBox(
-                  width: 3,
-                ),
-                GSText(
-                  text: "Tutor Profile",
-                  size: GSSizes.$sm,
-                )
-              ],
+    return SingleChildScrollView(
+      child: GSBox(
+        style: GSStyle(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.02),
+          sm: GSStyle(isVisible: false),
+          md: GSStyle(isVisible: true),
+          lg: GSStyle(isVisible: true),
+          color: const Color(0xFFF5F3FF),
+        ),
+        child: GSVStack(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.14, bottom: 8),
+              //  bottom: MediaQuery.of(context).size.width * 0.1),
+              child: const CustomBackButton(
+                buttonText: "Tutor Profile",
+              ),
             ),
-          ),
-          SingleChildScrollView(
-            child: GSBox(
+            GSBox(
               style: GSStyle(
                 color: Theme.of(context).colorScheme.onPrimary,
                 borderRadius: 3.5,
-                width: MediaQuery.of(context).size.width * 0.55,
+                width: MediaQuery.of(context).size.width * 0.60,
                 height: MediaQuery.of(context).size.height * 0.8,
                 padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.05,
@@ -58,12 +51,12 @@ class TutorProfileContentScreen extends StatelessWidget {
                   GSAvatar(
                     size: GSSizes.$md,
                     style: GSStyle(bg: $GSColors.backgroundLight600),
-                    // avatarBadge: GSAvatarBadge(
-                    //   style: GSStyle(
-                    //     bg: $GSColors.success300,
-                    //     dark: GSStyle(borderColor: $GSColors.backgroundDark900),
-                    //   ),
-                    // ),
+                    avatarBadge: GSAvatarBadge(
+                      style: GSStyle(
+                        bg: $GSColors.success300,
+                        dark: GSStyle(borderColor: $GSColors.backgroundDark900),
+                      ),
+                    ),
                     avatarImage: const GSImage(
                       imageType: GSImageType.network,
                       path: GSStringConstants.kTutorImageUrl,
@@ -78,6 +71,7 @@ class TutorProfileContentScreen extends StatelessWidget {
                   GSText(
                     text: "Rax Martin",
                     style: GSStyle(
+                      md: GSStyle(),
                       //fontWeight: FontWeight.w900,
                       textStyle: const TextStyle(
                         fontWeight: FontWeight.w900,
@@ -141,8 +135,8 @@ class TutorProfileContentScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
