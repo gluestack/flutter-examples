@@ -7,10 +7,12 @@ import 'package:provider/provider.dart';
 class CustomTopBarSmallScreenWidget extends StatefulWidget {
   final IconData trailingIcon;
   final String backButtonText;
+  final VoidCallback? onTrailingIconTap;
   const CustomTopBarSmallScreenWidget({
     super.key,
     required this.trailingIcon,
     required this.backButtonText,
+    this.onTrailingIconTap,
   });
 
   @override
@@ -26,26 +28,26 @@ class _CustomTopBarSmallScreenWidgetState
       builder: (context, themeProvider, child) {
         return GSBox(
           style: GSStyle(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              color: Theme.of(context).colorScheme.onPrimary,
-              xs: GSStyle(
-                color: Theme.of(context).colorScheme.primary,
-                isVisible: true,
-              ),
-              sm: GSStyle(
-                color: Theme.of(context).colorScheme.primary,
-                isVisible: true,
-              ),
-              md: GSStyle(
-                isVisible: false,
-              ),
-              lg: GSStyle(
-                isVisible: false,
-              ),
-              height: 60,
-              borderColor: $GSColors.warmGray300),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            color: Theme.of(context).colorScheme.onPrimary,
+            xs: GSStyle(
+              color: Theme.of(context).colorScheme.primary,
+              isVisible: true,
+            ),
+            sm: GSStyle(
+              color: Theme.of(context).colorScheme.primary,
+              isVisible: true,
+            ),
+            md: GSStyle(
+              isVisible: false,
+            ),
+            lg: GSStyle(
+              isVisible: false,
+            ),
+            height: 60,
+          ),
           child: GSHStack(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -60,9 +62,6 @@ class _CustomTopBarSmallScreenWidgetState
                 ),
                 child: CustomBackButton(
                   buttonText: widget.backButtonText,
-                  buttonTextStyle:
-                      TextStyle(color: Theme.of(context).colorScheme.onPrimary),
-                  iconColor: Theme.of(context).colorScheme.onPrimary,
                 ),
               ),
               GSBox(
@@ -74,20 +73,26 @@ class _CustomTopBarSmallScreenWidgetState
                 ),
                 child: GSHStack(
                   children: [
-                    GSIcon(
-                      icon: widget.trailingIcon,
-                      size: GSSizes.$lg,
-                      style: GSStyle(
-                          color: Theme.of(context).colorScheme.onPrimary),
+                    GSPressable(
+                      onPress: () {
+                        themeProvider.toggleTheme();
+                      },
+                      child: GSIcon(
+                        icon: Theme.of(context).brightness == Brightness.dark
+                            ? Icons.light_mode
+                            : Icons.dark_mode,
+                        size: GSSizes.$lg,
+                      ),
                     ),
                     const SizedBox(
                       width: 8,
                     ),
-                    GSIcon(
-                      icon: Icons.more_vert,
-                      size: GSSizes.$lg,
-                      style: GSStyle(
-                          color: Theme.of(context).colorScheme.onPrimary),
+                    GSPressable(
+                      onPress: widget.onTrailingIconTap,
+                      child: const GSIcon(
+                        icon: Icons.more_vert,
+                        size: GSSizes.$lg,
+                      ),
                     ),
                   ],
                 ),

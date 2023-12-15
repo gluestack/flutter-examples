@@ -3,13 +3,10 @@ import 'package:gluestack_ui/gluestack_ui.dart';
 
 class CustomBackButton extends StatelessWidget {
   final String buttonText;
-  final TextStyle? buttonTextStyle;
-  final Color? iconColor;
+
   const CustomBackButton({
     super.key,
     required this.buttonText,
-    this.buttonTextStyle,
-    this.iconColor,
   });
 
   @override
@@ -20,12 +17,9 @@ class CustomBackButton extends StatelessWidget {
       },
       child: GSHStack(
         children: [
-          GSButtonIcon(
+          const GSButtonIcon(
             icon: Icons.arrow_back,
             iconSize: GSSizes.$md,
-            style: GSStyle(
-              color: iconColor,
-            ),
           ),
           const SizedBox(
             width: 3,
@@ -33,9 +27,6 @@ class CustomBackButton extends StatelessWidget {
           GSText(
             text: buttonText,
             size: GSSizes.$sm,
-            style: GSStyle(
-              textStyle: buttonTextStyle,
-            ),
           )
         ],
       ),

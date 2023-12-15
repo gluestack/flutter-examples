@@ -37,13 +37,6 @@ class CustomTextField extends StatelessWidget {
       errorStyle: const TextStyle(
         fontSize: 7,
       ),
-      style: GSStyle(
-        borderColor: $GSColors.warmGray300,
-        onFocus: GSStyle(
-          borderColor: $GSColors.warmGray400,
-          borderWidth: 1,
-        ),
-      ),
     );
   }
 }

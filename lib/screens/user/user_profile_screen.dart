@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/user_profile_content_screen.dart';
-import 'package:gluestack_demo/screens/user_profile_form.dart';
+import 'package:gluestack_demo/screens/user/user_profile_content_screen.dart';
+import 'package:gluestack_demo/screens/user/user_profile_form.dart';
 import 'package:gluestack_demo/utils/constants.dart';
 import 'package:gluestack_demo/widgets/custom_topbar_small_screen.dart';
 import 'package:gluestack_demo/widgets/custom_topbar_widget.dart';
+import 'package:gluestack_demo/widgets/user_profile_drawer.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
 
-import '../widgets/custom_drawer_widget.dart';
+import '../../widgets/custom_drawer_widget.dart';
 
 class UserProfileScreen extends StatefulWidget {
   const UserProfileScreen({Key? key}) : super(key: key);
@@ -16,9 +17,11 @@ class UserProfileScreen extends StatefulWidget {
 }
 
 class _UserProfileScreenState extends State<UserProfileScreen> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       body: SafeArea(
         child: GSVStack(
           children: [
@@ -32,9 +35,12 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
 
             //small screen UI
 
-            const CustomTopBarSmallScreenWidget(
+            CustomTopBarSmallScreenWidget(
               backButtonText: GSStringConstants.kProfile,
               trailingIcon: Icons.notifications,
+              onTrailingIconTap: () {
+                scaffoldKey.currentState?.openDrawer();
+              },
             ),
 
             Expanded(
@@ -67,7 +73,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                         sm: GSStyle(isVisible: true),
                         md: GSStyle(isVisible: false),
                         lg: GSStyle(isVisible: false),
-                        //color: const Color(0xFFF5F3FF),
                       ),
                       child: UserProfileForm(
                         formWidth: MediaQuery.of(context).size.width * 0.999,
@@ -82,6 +87,11 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             ),
           ],
         ),
+      ),
+      drawer: const UserProfileScreenDrawer(
+        userProfileImage: GSStringConstants.kUserImageUrl,
+        userEmail: GSStringConstants.kUserEmail,
+        userName: GSStringConstants.kUserName,
       ),
     );
   }

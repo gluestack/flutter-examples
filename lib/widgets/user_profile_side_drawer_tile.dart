@@ -23,9 +23,6 @@ class UserProfileSideDrawerTile extends StatelessWidget {
       title: GSText(
         text: label,
         size: GSSizes.$xs,
-        style: GSStyle(
-          textStyle: const TextStyle(),
-        ),
       ),
       onTap: () {},
     );

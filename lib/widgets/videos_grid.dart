@@ -23,8 +23,6 @@ class _VideosGridState extends State<VideosGrid> {
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        print("MAX WIDTH ${constraints.maxWidth}");
-
         int crossAxisCount = calculateCrossAxisCount(constraints);
 
         return GridView.builder(

@@ -15,13 +15,17 @@ class CustomTabBar extends StatelessWidget {
         children: [
           GSBox(
             style: GSStyle(
-              color: $GSColors.warmGray100,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? const Color(0xFF374151)
+                  : $GSColors.warmGray100,
               borderRadius: 5.0,
               height: 35,
             ),
             child: TabBar(
               padding: EdgeInsets.zero,
-              dividerColor: $GSColors.warmGray100,
+              dividerColor: Theme.of(context).brightness == Brightness.dark
+                  ? const Color(0xFF374151)
+                  : $GSColors.warmGray100,
               labelStyle: const TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.w600,

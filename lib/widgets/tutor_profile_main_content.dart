@@ -17,7 +17,7 @@ class TutorProfileMainContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        color: Theme.of(context).colorScheme.onPrimary,
+        color: Theme.of(context).colorScheme.background,
         borderRadius: 3.5,
         width: boxWidth ?? MediaQuery.of(context).size.width * 0.60,
         height: boxHeight ?? MediaQuery.of(context).size.height * 0.9,
@@ -56,8 +56,6 @@ class TutorProfileMainContent extends StatelessWidget {
             child: GSText(
               text: GSStringConstants.kTutorUserProfile[0],
               style: GSStyle(
-                md: GSStyle(),
-                //fontWeight: FontWeight.w900,
                 textStyle: const TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 12,
@@ -69,7 +67,6 @@ class TutorProfileMainContent extends StatelessWidget {
             child: GSText(
               text: GSStringConstants.kTutorUserProfile[1],
               style: GSStyle(
-                //fontWeight: FontWeight.w900,
                 textStyle: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 9,
@@ -85,7 +82,6 @@ class TutorProfileMainContent extends StatelessWidget {
               textAlign: TextAlign.center,
               text: GSStringConstants.kTutorProfileBio,
               style: GSStyle(
-                //fontWeight: FontWeight.w900,
                 textStyle: const TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 9,

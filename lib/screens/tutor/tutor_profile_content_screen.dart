@@ -3,7 +3,7 @@ import 'package:gluestack_demo/utils/constants.dart';
 import 'package:gluestack_demo/widgets/custom_back_button_widget.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
 
-import '../widgets/tutor_profile_main_content.dart';
+import '../../widgets/tutor_profile_main_content.dart';
 
 class TutorProfileContentScreen extends StatelessWidget {
   const TutorProfileContentScreen({
@@ -21,7 +21,9 @@ class TutorProfileContentScreen extends StatelessWidget {
           sm: GSStyle(isVisible: false),
           md: GSStyle(isVisible: true),
           lg: GSStyle(isVisible: true),
-          color: const Color(0xFFF5F3FF),
+          color: Theme.of(context).brightness == Brightness.dark
+              ? const Color(0xFF374151)
+              : const Color(0xFFF5F3FF),
         ),
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
@@ -33,13 +35,8 @@ class TutorProfileContentScreen extends StatelessWidget {
                       left: MediaQuery.of(context).size.width * 0.11,
                       bottom: 8),
                 ),
-                child: CustomBackButton(
+                child: const CustomBackButton(
                   buttonText: GSStringConstants.kTutorProfile,
-                  iconColor: $GSColors.black,
-                  buttonTextStyle: TextStyle(
-                    color: $GSColors.black,
-                    fontWeight: FontWeight.w600,
-                  ),
                 ),
               ),
               const TutorProfileMainContent(),

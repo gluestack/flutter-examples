@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gluestack_demo/provider/theme_provider.dart';
-import 'package:gluestack_demo/screens/seller_details_screen.dart';
-import 'package:gluestack_demo/screens/tutor_profile_screen.dart';
-import 'package:gluestack_demo/screens/user_profile_screen.dart';
+import 'package:gluestack_demo/screens/seller/seller_details_screen.dart';
+import 'package:gluestack_demo/screens/tutor/tutor_profile_screen.dart';
+import 'package:gluestack_demo/screens/user/user_profile_screen.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +28,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GluestackProvider(
-      gluestackTokenConfig: GluestackTokenConfig(),
+      gluestackTokenConfig: GluestackTokenConfig(
+        gsColorsToken: GSColorsToken(
+          primary300: Theme.of(context).colorScheme.primary,
+          primary400: Theme.of(context).colorScheme.primary,
+          primary500: Theme.of(context).colorScheme.primary,
+          primary600: Theme.of(context).colorScheme.primary,
+          primary700: Theme.of(context).colorScheme.primary,
+          backgroundLight800: Colors.grey.shade500,
+          backgroundDark400: Colors.white,
+          backgroundLight200: Colors.grey.shade400.withOpacity(0.15),
+        ),
+      ),
       child: MaterialApp(
         navigatorKey: navigatorKey,
         title: 'Gluestack Demo',

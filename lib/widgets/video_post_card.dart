@@ -11,7 +11,9 @@ class VideoPostCard extends StatelessWidget {
     return GSBox(
       style: GSStyle(
         height: 200,
-        color: $GSColors.warmGray100,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? const Color(0xFF374151)
+            : $GSColors.warmGray100,
         borderRadius: 5,
       ),
       child: GSVStack(

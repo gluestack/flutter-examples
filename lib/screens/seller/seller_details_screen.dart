@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/seller_details_content_screen.dart';
+import 'package:gluestack_demo/screens/seller/seller_details_content_screen.dart';
 import 'package:gluestack_demo/utils/constants.dart';
 import 'package:gluestack_demo/widgets/custom_topbar_widget.dart';
 import 'package:gluestack_ui/gluestack_ui.dart';

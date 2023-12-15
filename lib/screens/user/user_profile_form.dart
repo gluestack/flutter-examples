@@ -28,7 +28,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        color: Theme.of(context).colorScheme.onPrimary,
+        color: Theme.of(context).colorScheme.background,
         borderRadius: 3.5,
         width: widget.formWidth ?? MediaQuery.of(context).size.width * 0.55,
         height: widget.formHeight ?? MediaQuery.of(context).size.height * 0.70,
@@ -62,16 +62,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
                       }
                     },
                     variant: GSVariants.outline,
-                    //  action: GSActions.positive,
                     size: GSSizes.$xs,
-                    style: GSStyle(
-                      borderColor: Theme.of(context).colorScheme.primary,
-                      onHover: GSStyle(
-                        borderColor: Theme.of(context).colorScheme.primary,
-                      ),
-                    ),
-                    //size: GSSizes.$2xs,
-                    // Causes error ==> The following TypeErrorImpl was thrown building GSButton(dirty):Unexpected null value.
                     child: GSHStack(
                       children: [
                         GSButtonIcon(

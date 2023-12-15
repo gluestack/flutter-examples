@@ -27,22 +27,19 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
       builder: (context, themeProvider, child) {
         return GSBox(
           style: GSStyle(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              color: Theme.of(context).colorScheme.onPrimary,
-              xs: GSStyle(isVisible: false),
-              sm: GSStyle(isVisible: false),
-              md: GSStyle(
-                isVisible: true,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-              lg: GSStyle(
-                isVisible: true,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-              height: 60,
-              borderColor: $GSColors.warmGray300),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            xs: GSStyle(isVisible: false),
+            sm: GSStyle(isVisible: false),
+            md: GSStyle(
+              isVisible: true,
+            ),
+            lg: GSStyle(
+              isVisible: true,
+            ),
+            height: 60,
+          ),
           child: GSHStack(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -84,8 +81,8 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
       ThemeProvider themeProvider, BuildContext context) {
     return GSHStack(
       children: [
-        GestureDetector(
-          onTap: () {
+        GSPressable(
+          onPress: () {
             themeProvider.toggleTheme();
           },
           child: GSIcon(
@@ -93,7 +90,6 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
                 ? Icons.light_mode
                 : Icons.dark_mode,
             size: GSSizes.$lg,
-            style: GSStyle(color: $GSColors.warmGray400),
           ),
         ),
         const SizedBox(
@@ -118,7 +114,6 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
           icon: Icons.menu,
           size: GSSizes.$sm,
           style: GSStyle(
-            color: Theme.of(context).colorScheme.secondary,
             sm: GSStyle(
               isVisible: false,
             ),

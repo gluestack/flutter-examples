@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/tutor_profile_content_screen.dart';
+import 'package:gluestack_demo/screens/tutor/tutor_profile_content_screen.dart';
 import 'package:gluestack_demo/utils/constants.dart';
 import 'package:gluestack_demo/widgets/custom_drawer_widget.dart';
 import 'package:gluestack_demo/widgets/custom_topbar_small_screen.dart';
