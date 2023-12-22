@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/user/user_profile_form.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/custom_back_button_widget.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class UserProfileContentScreen extends StatelessWidget {
   const UserProfileContentScreen({
@@ -21,7 +17,7 @@ class UserProfileContentScreen extends StatelessWidget {
           sm: GSStyle(isVisible: false),
           md: GSStyle(isVisible: true),
           lg: GSStyle(isVisible: true),
-          color: Theme.of(context).brightness == Brightness.dark
+          bg: Theme.of(context).brightness == Brightness.dark
               ? const Color(0xFF374151)
               : const Color(0xFFF5F3FF),
         ),

@@ -1,13 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/screens/user/user_profile_content_screen.dart';
-import 'package:gluestack_demo/screens/user/user_profile_form.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/custom_topbar_small_screen.dart';
-import 'package:gluestack_demo/widgets/custom_topbar_widget.dart';
-import 'package:gluestack_demo/widgets/user_profile_drawer.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
-
-import '../../widgets/custom_drawer_widget.dart';
+import '../../public.dart';
 
 class UserProfileScreen extends StatefulWidget {
   const UserProfileScreen({Key? key}) : super(key: key);

@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:gluestack_demo/utils/common_utils.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/custom_text_field.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class UserProfileForm extends StatefulWidget {
   final double? formWidth;
@@ -28,7 +23,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        color: Theme.of(context).colorScheme.background,
+        bg: Theme.of(context).colorScheme.background,
         borderRadius: 3.5,
         width: widget.formWidth ?? MediaQuery.of(context).size.width * 0.55,
         height: widget.formHeight ?? MediaQuery.of(context).size.height * 0.70,
@@ -57,9 +52,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
                   ),
                   GSButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        // Form is valid, perform your actions here
-                      }
+                      if (_formKey.currentState!.validate()) {}
                     },
                     variant: GSVariants.outline,
                     size: GSSizes.$xs,
@@ -75,7 +68,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
                             padding: const EdgeInsets.only(left: 5),
                           ),
                           child: GSButtonText(
-                            text: 'Edit Profile',
+                            text: GSStringConstants.kEditProfile,
                             style: GSStyle(
                               textStyle: TextStyle(
                                 color: Theme.of(context).colorScheme.primary,

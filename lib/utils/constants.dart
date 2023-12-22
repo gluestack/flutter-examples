@@ -6,6 +6,8 @@ class GSStringConstants {
   static const String kUserName = 'Jane Doe';
   static const String kProfile = 'Profile';
   static const String kTutorProfile = 'Tutor Profile';
+  static const String kCoolStore = 'Cool Store';
+  static const String kEditProfile = 'Edit Profile';
 
   static const String kTutorEmail = 'raxmartin@mydomain.com';
   static const String kTutorName = 'Rax Martin';
@@ -39,6 +41,26 @@ class GSStringConstants {
     "California",
     "A user profile is a collection of settings and info of a user. It contains \n critical information that is used to identify an individual"
   ];
+
+  static List<String> kUserReview = [
+    "Martin Henry",
+    "12 May 2021",
+    "I Loved the quality of the products. Highly recommended to everyone who is looking for comfortable outfits for themselves."
+  ];
+
+  static List<String> kProductsDetails = [
+    "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2367&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "24th Sep 2018",
+    "843 Products",
+    "Postive Feedback",
+    "97%",
+    "Customers",
+    '50K'
+  ];
+
+  static const String kContinue = 'CONTINUE';
+  static const String kReviews = 'Reviews';
+  static const String kOtherItems = 'Other Items';
 
   static List<String> postTitles = [
     'Nature',

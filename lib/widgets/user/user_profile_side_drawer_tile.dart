@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class UserProfileSideDrawerTile extends StatelessWidget {
   final IconData icon;

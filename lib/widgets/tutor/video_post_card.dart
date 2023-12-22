@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class VideoPostCard extends StatelessWidget {
   final VideoPost post;
@@ -11,7 +10,7 @@ class VideoPostCard extends StatelessWidget {
     return GSBox(
       style: GSStyle(
         height: 200,
-        color: Theme.of(context).brightness == Brightness.dark
+        bg: Theme.of(context).brightness == Brightness.dark
             ? const Color(0xFF374151)
             : $GSColors.warmGray100,
         borderRadius: 5,

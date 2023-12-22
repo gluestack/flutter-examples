@@ -1,23 +1,33 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/widgets/user_profile_side_drawer_tile.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
-class UserProfileScreenDrawer extends StatelessWidget {
-  final String userProfileImage;
+class CustomDrawerWidget extends StatelessWidget {
+  final String profileImageUrl;
   final String userName;
   final String userEmail;
-
-  const UserProfileScreenDrawer({
+  const CustomDrawerWidget({
     super.key,
-    required this.userProfileImage,
+    required this.profileImageUrl,
     required this.userName,
     required this.userEmail,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      width: 200,
+    return GSBox(
+      style: GSStyle(
+        xs: GSStyle(
+          isVisible: false,
+        ),
+        sm: GSStyle(
+          isVisible: false,
+        ),
+        md: GSStyle(
+          isVisible: true,
+        ),
+        lg: GSStyle(
+          isVisible: true,
+        ),
+      ),
       child: ListView(
         children: [
           const SizedBox(
@@ -25,7 +35,7 @@ class UserProfileScreenDrawer extends StatelessWidget {
           ),
           GSCenter(
             child: GSImage(
-              path: userProfileImage,
+              path: profileImageUrl,
               imageType: GSImageType.network,
               borderRadius: GSBorderRadius.$full,
               size: GSSizes.$lg,
@@ -50,11 +60,6 @@ class UserProfileScreenDrawer extends StatelessWidget {
             child: GSText(
               text: userEmail,
               size: GSSizes.$xs,
-              style: GSStyle(
-                textStyle: TextStyle(
-                  color: $GSColors.warmGray400,
-                ),
-              ),
             ),
           ),
           const SizedBox(

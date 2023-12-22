@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/custom_tabbar.dart';
-import 'package:gluestack_demo/widgets/followers_count_tile.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class TutorProfileMainContent extends StatelessWidget {
   final double? boxWidth;
@@ -17,7 +13,7 @@ class TutorProfileMainContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        color: Theme.of(context).colorScheme.background,
+        bg: Theme.of(context).colorScheme.background,
         borderRadius: 3.5,
         width: boxWidth ?? MediaQuery.of(context).size.width * 0.60,
         height: boxHeight ?? MediaQuery.of(context).size.height * 0.9,

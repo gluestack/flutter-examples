@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/widgets/videos_grid.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
+import '../../public.dart';
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({
@@ -15,7 +13,7 @@ class CustomTabBar extends StatelessWidget {
         children: [
           GSBox(
             style: GSStyle(
-              color: Theme.of(context).brightness == Brightness.dark
+              bg: Theme.of(context).brightness == Brightness.dark
                   ? const Color(0xFF374151)
                   : $GSColors.warmGray100,
               borderRadius: 5.0,

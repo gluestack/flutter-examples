@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/video_post_card.dart';
+import '../../public.dart';
 
 class VideosGrid extends StatefulWidget {
   const VideosGrid({super.key});

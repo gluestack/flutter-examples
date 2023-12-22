@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/provider/theme_provider.dart';
-import 'package:gluestack_demo/utils/constants.dart';
-import 'package:gluestack_demo/widgets/startup_icon.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
-import 'package:provider/provider.dart';
+import '../../public.dart';
 
 class CustomTopBarWidget extends StatefulWidget {
   final String profileImageUrl;

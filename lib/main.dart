@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/provider/theme_provider.dart';
-import 'package:gluestack_demo/screens/seller/seller_details_screen.dart';
-import 'package:gluestack_demo/screens/tutor/tutor_profile_screen.dart';
-import 'package:gluestack_demo/screens/user/user_profile_screen.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
-import 'package:provider/provider.dart';
+import 'public.dart';
 
 void main() {
   runApp(
@@ -37,6 +31,7 @@ class _MyAppState extends State<MyApp> {
           primary700: Theme.of(context).colorScheme.primary,
           backgroundLight800: Colors.grey.shade500,
           backgroundDark400: Colors.white,
+          textDark200: Colors.white,
           backgroundLight200: Colors.grey.shade400.withOpacity(0.15),
         ),
       ),

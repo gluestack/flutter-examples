@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gluestack_demo/provider/theme_provider.dart';
-import 'package:gluestack_demo/widgets/custom_back_button_widget.dart';
-import 'package:gluestack_ui/gluestack_ui.dart';
-import 'package:provider/provider.dart';
+import '../../public.dart';
 
 class CustomTopBarSmallScreenWidget extends StatefulWidget {
   final IconData trailingIcon;
