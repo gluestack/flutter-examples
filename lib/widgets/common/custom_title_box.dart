@@ -37,8 +37,13 @@ class CustomTitleBox extends StatelessWidget {
           GSText(
             text: description,
             style: GSStyle(
-              textStyle:
-                  const TextStyle(fontSize: 9, fontWeight: FontWeight.w300),
+              textStyle: TextStyle(
+                fontSize: 9,
+                fontWeight: FontWeight.w300,
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? $GSColors.white
+                    : null,
+              ),
             ),
           ),
         ],

@@ -26,8 +26,11 @@ class SellerDetailsContentScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * 0.23, bottom: 8),
               ),
-              child: const CustomBackButton(
+              child: CustomBackButton(
                 buttonText: GSStringConstants.kCoolStore,
+                iconColor: Theme.of(context).brightness == Brightness.dark
+                    ? GSStyle(color: $GSColors.white)
+                    : null,
               ),
             ),
             GSBox(

@@ -33,9 +33,12 @@ class VideoPostCard extends StatelessWidget {
               ),
               child: GSText(
                 style: GSStyle(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     fontSize: 10.0,
                     fontWeight: FontWeight.bold,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? $GSColors.warmGray300
+                        : null,
                   ),
                 ),
                 text: post.title,

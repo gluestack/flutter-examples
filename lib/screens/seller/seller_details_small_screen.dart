@@ -19,8 +19,8 @@ class SellerDetailsSmallScreen extends StatelessWidget {
         md: GSStyle(isVisible: false),
         lg: GSStyle(isVisible: false),
         bg: Theme.of(context).brightness == Brightness.dark
-            ? Colors.black
-            : Colors.white,
+            ? $GSColors.black
+            : $GSColors.white,
       ),
       child: SingleChildScrollView(
         child: GSVStack(
@@ -37,13 +37,23 @@ class SellerDetailsSmallScreen extends StatelessWidget {
             GSText(
               text: GSStringConstants.kProductsDetails[1],
               size: GSSizes.$xs,
-              style: GSStyle(),
+              style: GSStyle(
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? $GSColors.warmGray200
+                    : null,
+              ),
             ),
             GSText(
               text: GSStringConstants.kProductsDetails[2],
               size: GSSizes.$xs,
               style: GSStyle(
-                  textStyle: const TextStyle(fontWeight: FontWeight.w600)),
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? $GSColors.white
+                      : null,
+                ),
+              ),
             ),
             const SizedBox(
               height: 10,

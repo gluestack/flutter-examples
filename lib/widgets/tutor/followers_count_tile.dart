@@ -17,9 +17,12 @@ class FollowersCountTile extends StatelessWidget {
           textAlign: TextAlign.center,
           text: count,
           style: GSStyle(
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 12,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? $GSColors.white
+                  : null,
             ),
           ),
         ),
@@ -27,8 +30,11 @@ class FollowersCountTile extends StatelessWidget {
           textAlign: TextAlign.center,
           text: title,
           style: GSStyle(
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontSize: 9,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? $GSColors.warmGray300
+                  : null,
             ),
           ),
         ),

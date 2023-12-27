@@ -30,8 +30,16 @@ class UserProfileContentScreen extends StatelessWidget {
                       left: MediaQuery.of(context).size.width * 0.14,
                       bottom: 8),
                 ),
-                child: const CustomBackButton(
+                child: CustomBackButton(
                   buttonText: GSStringConstants.kProfile,
+                  iconColor: Theme.of(context).brightness == Brightness.dark
+                      ? GSStyle(color: $GSColors.white)
+                      : null,
+                  textStyle: TextStyle(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? $GSColors.white
+                        : null,
+                  ),
                 ),
               ),
               const UserProfileForm(),

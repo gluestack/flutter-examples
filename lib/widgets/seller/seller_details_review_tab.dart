@@ -32,9 +32,12 @@ class SellerDetailsReviewTab extends StatelessWidget {
                       text: GSStringConstants.kUserReview[0],
                       size: GSSizes.$xs,
                       style: GSStyle(
-                          textStyle: const TextStyle(
+                          textStyle: TextStyle(
                         fontSize: 9,
                         fontWeight: FontWeight.w800,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? $GSColors.white
+                            : null,
                       )),
                     ),
                     GSHStack(
@@ -62,7 +65,14 @@ class SellerDetailsReviewTab extends StatelessWidget {
               text: GSStringConstants.kUserReview[1],
               size: GSSizes.$xs,
               style: GSStyle(
-                  textStyle: const TextStyle(fontSize: 9, letterSpacing: 0.2)),
+                textStyle: TextStyle(
+                  fontSize: 9,
+                  letterSpacing: 0.2,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? $GSColors.warmGray400
+                      : null,
+                ),
+              ),
             ),
           ],
         ),
@@ -73,7 +83,13 @@ class SellerDetailsReviewTab extends StatelessWidget {
           text: GSStringConstants.kUserReview[2],
           size: GSSizes.$xs,
           style: GSStyle(
-              textStyle: const TextStyle(fontSize: 9, letterSpacing: 0.2)),
+              textStyle: TextStyle(
+            fontSize: 9,
+            letterSpacing: 0.2,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? $GSColors.warmGray400
+                : null,
+          )),
         ),
       ],
     );

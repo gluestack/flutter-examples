@@ -22,6 +22,12 @@ class UserProfileSideDrawerTile extends StatelessWidget {
       title: GSText(
         text: label,
         size: GSSizes.$xs,
+        style: GSStyle(
+            textStyle: TextStyle(
+          color: Theme.of(context).brightness == Brightness.dark
+              ? $GSColors.white
+              : null,
+        )),
       ),
       onTap: () {},
     );

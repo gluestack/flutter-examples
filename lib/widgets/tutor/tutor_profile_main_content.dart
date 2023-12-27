@@ -52,9 +52,12 @@ class TutorProfileMainContent extends StatelessWidget {
             child: GSText(
               text: GSStringConstants.kTutorUserProfile[0],
               style: GSStyle(
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 12,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? $GSColors.white
+                      : null,
                 ),
               ),
             ),
@@ -78,9 +81,12 @@ class TutorProfileMainContent extends StatelessWidget {
               textAlign: TextAlign.center,
               text: GSStringConstants.kTutorProfileBio,
               style: GSStyle(
-                textStyle: const TextStyle(
+                textStyle: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 9,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? $GSColors.warmGray300
+                      : null,
                 ),
               ),
             ),

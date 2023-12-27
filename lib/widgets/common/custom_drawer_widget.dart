@@ -49,7 +49,12 @@ class CustomDrawerWidget extends StatelessWidget {
             child: GSText(
               text: userName,
               style: GSStyle(
-                textStyle: const TextStyle(fontWeight: FontWeight.w900),
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? $GSColors.white
+                      : null,
+                ),
               ),
             ),
           ),
@@ -60,6 +65,12 @@ class CustomDrawerWidget extends StatelessWidget {
             child: GSText(
               text: userEmail,
               size: GSSizes.$xs,
+              style: GSStyle(
+                  textStyle: TextStyle(
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? $GSColors.warmGray500
+                    : null,
+              )),
             ),
           ),
           const SizedBox(

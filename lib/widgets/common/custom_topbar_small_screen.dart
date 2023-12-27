@@ -27,13 +27,13 @@ class _CustomTopBarSmallScreenWidgetState
             padding: const EdgeInsets.symmetric(
               horizontal: 10,
             ),
-            color: Theme.of(context).colorScheme.onPrimary,
+            bg: Theme.of(context).colorScheme.onPrimary,
             xs: GSStyle(
-              color: Theme.of(context).colorScheme.primary,
+              bg: Theme.of(context).colorScheme.primary,
               isVisible: true,
             ),
             sm: GSStyle(
-              color: Theme.of(context).colorScheme.primary,
+              bg: Theme.of(context).colorScheme.primary,
               isVisible: true,
             ),
             md: GSStyle(
@@ -58,6 +58,12 @@ class _CustomTopBarSmallScreenWidgetState
                 ),
                 child: CustomBackButton(
                   buttonText: widget.backButtonText,
+                  iconColor: GSStyle(
+                    color: $GSColors.white,
+                  ),
+                  textStyle: TextStyle(
+                    color: $GSColors.white,
+                  ),
                 ),
               ),
               GSBox(

@@ -30,8 +30,16 @@ class TutorProfileContentScreen extends StatelessWidget {
                       left: MediaQuery.of(context).size.width * 0.11,
                       bottom: 8),
                 ),
-                child: const CustomBackButton(
+                child: CustomBackButton(
                   buttonText: GSStringConstants.kTutorProfile,
+                  iconColor: Theme.of(context).brightness == Brightness.dark
+                      ? GSStyle(color: $GSColors.white)
+                      : null,
+                  textStyle: TextStyle(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? $GSColors.white
+                        : null,
+                  ),
                 ),
               ),
               const TutorProfileMainContent(),

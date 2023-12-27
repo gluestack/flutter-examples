@@ -13,8 +13,13 @@ class ProductDetailsHeader extends StatelessWidget {
         GSText(
           text: GSStringConstants.kCoolStore,
           size: GSSizes.$xs,
-          style:
-              GSStyle(textStyle: const TextStyle(fontWeight: FontWeight.w600)),
+          style: GSStyle(
+              textStyle: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? $GSColors.white
+                : null,
+          )),
         ),
         GSHStack(
           children: [
@@ -26,7 +31,12 @@ class ProductDetailsHeader extends StatelessWidget {
               text: "4.9",
               size: GSSizes.$xs,
               style: GSStyle(
-                  textStyle: const TextStyle(fontWeight: FontWeight.w600)),
+                  textStyle: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? $GSColors.white
+                    : null,
+              )),
             ),
             GSText(
               text: "(120)",
