@@ -112,6 +112,29 @@ class _MyAppState extends State<MyApp> {
                 text: 'Seller Details Screen',
               ),
             ),
+            const SizedBox(
+              height: 50,
+            ),
+            GestureDetector(
+              onTap: () {
+                navigatorKey.currentState!.push(
+                  MaterialPageRoute(
+                    builder: (context) => const QRCodeScreen(),
+                  ),
+                );
+              },
+              child: GSText(
+                style: GSStyle(
+                  textStyle: const TextStyle(
+                    decoration: TextDecoration.none,
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 4, 65, 116),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                text: 'QR Code Screen',
+              ),
+            ),
           ],
         ),
       ),

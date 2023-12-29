@@ -3,12 +3,11 @@ import '../../public.dart';
 class CustomTopBarWidget extends StatefulWidget {
   final String profileImageUrl;
   final IconData trailingIcon;
-  final String backButtonText;
+
   const CustomTopBarWidget({
     super.key,
     required this.profileImageUrl,
     required this.trailingIcon,
-    required this.backButtonText,
   });
 
   @override

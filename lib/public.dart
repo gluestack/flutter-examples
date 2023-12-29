@@ -31,3 +31,6 @@ export 'package:gluestack_demo/widgets/common/custom_tabbar.dart';
 export 'package:gluestack_demo/widgets/tutor/followers_count_tile.dart';
 export 'package:gluestack_demo/widgets/common/startup_icon.dart';
 export 'package:gluestack_demo/widgets/tutor/videos_grid.dart';
+export 'package:gluestack_demo/screens/qr_code/qr_code_screen.dart';
+export 'package:gluestack_demo/screens/qr_code/qr_code_content_screen.dart';
+export 'package:gluestack_demo/screens/qr_code/qr_code_small_screen.dart';

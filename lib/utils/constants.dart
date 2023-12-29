@@ -2,9 +2,13 @@ class GSStringConstants {
   static const String kUserImageUrl =
       'https://images.unsplash.com/photo-1701215097228-188d262c1f6b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
-  static const String kUserEmail = 'janedoe@@mydomain.com';
+  static const String kQRCodeImageUrl =
+      "https://support.thinkific.com/hc/article_attachments/360042081334/5d37325ea1ff6.png";
+  static const String kUserEmail = 'janedoe@mydomain.com';
+  static const String kUser = 'jane@mydomain';
   static const String kUserName = 'Jane Doe';
   static const String kProfile = 'Profile';
+  static const String kQRCode = 'QR Code';
   static const String kTutorProfile = 'Tutor Profile';
   static const String kCoolStore = 'Cool Store';
   static const String kEditProfile = 'Edit Profile';
@@ -59,6 +63,8 @@ class GSStringConstants {
   ];
 
   static const String kContinue = 'CONTINUE';
+
+  static const String kScanner = "OPEN CODE SCANNER";
   static const String kReviews = 'Reviews';
   static const String kOtherItems = 'Other Items';
 

@@ -19,7 +19,6 @@ class _TutorProfileScreenState extends State<TutorProfileScreen> {
             const CustomTopBarWidget(
               profileImageUrl: GSStringConstants.kTutorImageUrl,
               trailingIcon: Icons.nightlight_rounded,
-              backButtonText: GSStringConstants.kTutorProfile,
             ),
 
             //small screen UI

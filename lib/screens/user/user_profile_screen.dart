@@ -21,7 +21,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             const CustomTopBarWidget(
               profileImageUrl: GSStringConstants.kUserImageUrl,
               trailingIcon: Icons.notifications,
-              backButtonText: GSStringConstants.kProfile,
             ),
 
             //small screen UI

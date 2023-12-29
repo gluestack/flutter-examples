@@ -46,7 +46,10 @@ class SellerDetailsProductDetails extends StatelessWidget {
           GSButton(
             variant: GSVariants.solid,
             style: GSStyle(md: GSStyle(width: 200)),
-            child: const GSText(text: "CONTINUE"),
+            child: GSText(
+              text: GSStringConstants.kContinue,
+              style: GSStyle(textStyle: TextStyle(color: $GSColors.white)),
+            ),
             onPressed: () {},
           ),
           const SizedBox(

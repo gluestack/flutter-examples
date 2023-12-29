@@ -1,13 +1,13 @@
 import '../../public.dart';
 
-class SellerDetailsScreen extends StatefulWidget {
-  const SellerDetailsScreen({Key? key}) : super(key: key);
+class QRCodeScreen extends StatefulWidget {
+  const QRCodeScreen({Key? key}) : super(key: key);
 
   @override
-  State<SellerDetailsScreen> createState() => _SellerDetailsScreenState();
+  State<QRCodeScreen> createState() => _QRCodeScreenState();
 }
 
-class _SellerDetailsScreenState extends State<SellerDetailsScreen> {
+class _QRCodeScreenState extends State<QRCodeScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -22,13 +22,13 @@ class _SellerDetailsScreenState extends State<SellerDetailsScreen> {
               //small screen UI
 
               CustomTopBarSmallScreenWidget(
-                backButtonText: GSStringConstants.kCoolStore,
+                backButtonText: GSStringConstants.kQRCode,
                 trailingIcon: Icons.nightlight_rounded,
               ),
 
-              SellerDetailsContentScreen(),
+              QRCodeContentScreen(),
               //small screen UI
-              SellerDetailsSmallScreen()
+              QRCodeSmallScreen()
             ],
           ),
         ),
