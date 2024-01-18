@@ -29,15 +29,11 @@ class SellerDetailsReviewTab extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     GSText(
-                      text: GSStringConstants.kUserReview[0],
-                      size: GSSizes.$xs,
+                      text: GSStringConstants.kUserReview['name']!,
                       style: GSStyle(
                           textStyle: TextStyle(
-                        fontSize: 9,
-                        fontWeight: FontWeight.w800,
-                        color: Theme.of(context).brightness == Brightness.dark
-                            ? $GSColors.white
-                            : null,
+                        fontSize: $GSFontSize.$2xs,
+                        fontWeight: FontWeight.bold,
                       )),
                     ),
                     GSHStack(
@@ -62,15 +58,10 @@ class SellerDetailsReviewTab extends StatelessWidget {
               ],
             ),
             GSText(
-              text: GSStringConstants.kUserReview[1],
-              size: GSSizes.$xs,
+              text: GSStringConstants.kUserReview['date']!,
               style: GSStyle(
                 textStyle: TextStyle(
-                  fontSize: 9,
-                  letterSpacing: 0.2,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? $GSColors.warmGray400
-                      : null,
+                  fontSize: $GSFontSize.$2xs,
                 ),
               ),
             ),
@@ -80,16 +71,11 @@ class SellerDetailsReviewTab extends StatelessWidget {
           height: 5,
         ),
         GSText(
-          text: GSStringConstants.kUserReview[2],
-          size: GSSizes.$xs,
+          text: GSStringConstants.kUserReview['description']!,
+          size: GSSizes.$2xs,
           style: GSStyle(
-              textStyle: TextStyle(
-            fontSize: 9,
-            letterSpacing: 0.2,
-            color: Theme.of(context).brightness == Brightness.dark
-                ? $GSColors.warmGray400
-                : null,
-          )),
+            dark: GSStyle(textStyle: TextStyle(color: $GSColors.warmGray400)),
+          ),
         ),
       ],
     );

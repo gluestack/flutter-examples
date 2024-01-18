@@ -13,7 +13,10 @@ class TutorProfileMainContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        bg: Theme.of(context).colorScheme.background,
+        dark: GSStyle(
+          bg: $GSColors.darkBlue100,
+        ),
+        bg: $GSColors.white,
         borderRadius: 3.5,
         width: boxWidth ?? MediaQuery.of(context).size.width * 0.60,
         height: boxHeight ?? MediaQuery.of(context).size.height * 0.9,
@@ -50,25 +53,26 @@ class TutorProfileMainContent extends StatelessWidget {
           ),
           GSCenter(
             child: GSText(
-              text: GSStringConstants.kTutorUserProfile[0],
+              text: GSStringConstants.kTutorUserProfile['name']!,
               style: GSStyle(
                 textStyle: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 12,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? $GSColors.white
-                      : null,
+                  fontWeight: FontWeight.bold,
+                  fontSize: $GSFontSize.$xs,
                 ),
               ),
             ),
           ),
           GSCenter(
             child: GSText(
-              text: GSStringConstants.kTutorUserProfile[1],
+              text: GSStringConstants.kTutorUserProfile['location']!,
               style: GSStyle(
-                textStyle: const TextStyle(
+                dark: GSStyle(
+                    textStyle: TextStyle(
+                  color: $GSColors.warmGray300,
+                )),
+                textStyle: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 9,
+                  fontSize: $GSFontSize.$2xs,
                 ),
               ),
             ),
@@ -79,15 +83,16 @@ class TutorProfileMainContent extends StatelessWidget {
           GSCenter(
             child: GSText(
               textAlign: TextAlign.center,
-              text: GSStringConstants.kTutorProfileBio,
+              text: GSStringConstants.kTutorUserProfile['description']!,
               style: GSStyle(
                 textStyle: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontSize: 9,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? $GSColors.warmGray300
-                      : null,
+                  fontSize: $GSFontSize.$2xs,
                 ),
+                dark: GSStyle(
+                    textStyle: TextStyle(
+                  color: $GSColors.warmGray300,
+                )),
               ),
             ),
           ),

@@ -12,11 +12,26 @@ class SellerDetailsContentScreen extends StatelessWidget {
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.02),
         xs: GSStyle(isVisible: false),
         sm: GSStyle(isVisible: false),
-        md: GSStyle(isVisible: true),
-        lg: GSStyle(isVisible: true),
-        bg: Theme.of(context).brightness == Brightness.dark
-            ? const Color(0xFF374151)
-            : const Color(0xFFF5F3FF),
+        md: GSStyle(
+          isVisible: true,
+          bg: $GSColors.lightBlue50,
+        ),
+        lg: GSStyle(
+          isVisible: true,
+          bg: $GSColors.lightBlue50,
+        ),
+        dark: GSStyle(
+          xs: GSStyle(isVisible: false),
+          sm: GSStyle(isVisible: false),
+          md: GSStyle(
+            isVisible: true,
+            bg: $GSColors.darkBlue50,
+          ),
+          lg: GSStyle(
+            isVisible: true,
+            bg: $GSColors.darkBlue50,
+          ),
+        ),
       ),
       child: SingleChildScrollView(
         child: GSVStack(
@@ -26,18 +41,16 @@ class SellerDetailsContentScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * 0.23, bottom: 8),
               ),
-              child: CustomBackButton(
+              child: const CustomBackButton(
                 buttonText: GSStringConstants.kCoolStore,
-                iconColor: Theme.of(context).brightness == Brightness.dark
-                    ? GSStyle(color: $GSColors.white)
-                    : null,
               ),
             ),
             GSBox(
               style: GSStyle(
-                bg: Theme.of(context).brightness == Brightness.dark
-                    ? $GSColors.black
-                    : $GSColors.white,
+                dark: GSStyle(
+                  bg: $GSColors.darkBlue200,
+                ),
+                bg: $GSColors.white,
                 borderRadius: 3.5,
                 width: MediaQuery.of(context).size.width * 0.55,
                 height: MediaQuery.of(context).size.height * 0.8,

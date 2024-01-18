@@ -27,13 +27,12 @@ class _CustomTopBarSmallScreenWidgetState
             padding: const EdgeInsets.symmetric(
               horizontal: 10,
             ),
-            bg: Theme.of(context).colorScheme.onPrimary,
             xs: GSStyle(
-              bg: Theme.of(context).colorScheme.primary,
               isVisible: true,
+              bg: $GSColors.primary300,
             ),
             sm: GSStyle(
-              bg: Theme.of(context).colorScheme.primary,
+              bg: $GSColors.primary300,
               isVisible: true,
             ),
             md: GSStyle(
@@ -41,6 +40,22 @@ class _CustomTopBarSmallScreenWidgetState
             ),
             lg: GSStyle(
               isVisible: false,
+            ),
+            dark: GSStyle(
+              xs: GSStyle(
+                isVisible: true,
+                bg: $GSColors.darkBlue200,
+              ),
+              sm: GSStyle(
+                isVisible: true,
+                bg: $GSColors.darkBlue200,
+              ),
+              md: GSStyle(
+                isVisible: false,
+              ),
+              lg: GSStyle(
+                isVisible: false,
+              ),
             ),
             height: 60,
           ),
@@ -58,12 +73,6 @@ class _CustomTopBarSmallScreenWidgetState
                 ),
                 child: CustomBackButton(
                   buttonText: widget.backButtonText,
-                  iconColor: GSStyle(
-                    color: $GSColors.white,
-                  ),
-                  textStyle: TextStyle(
-                    color: $GSColors.white,
-                  ),
                 ),
               ),
               GSBox(

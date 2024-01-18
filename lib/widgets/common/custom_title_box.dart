@@ -15,13 +15,13 @@ class CustomTitleBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        width: width ?? MediaQuery.of(context).size.width * 0.115,
-        height: 48,
-        borderRadius: 2.5,
-        bg: Theme.of(context).brightness == Brightness.dark
-            ? const Color(0xFF374151)
-            : const Color(0xFFF5F3FF),
-      ),
+          width: width ?? MediaQuery.of(context).size.width * 0.115,
+          height: 48,
+          borderRadius: 2.5,
+          bg: $GSColors.lightBlue100,
+          dark: GSStyle(
+            bg: $GSColors.darkBlue50,
+          )),
       child: GSVStack(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -29,20 +29,17 @@ class CustomTitleBox extends StatelessWidget {
             text: header,
             style: GSStyle(
               textStyle: TextStyle(
-                  fontSize: 12,
-                  color: Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.w900),
+                fontSize: $GSFontSize.$xs,
+                color: $GSColors.purple100,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           GSText(
             text: description,
             style: GSStyle(
               textStyle: TextStyle(
-                fontSize: 9,
-                fontWeight: FontWeight.w300,
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? $GSColors.white
-                    : null,
+                fontSize: $GSFontSize.$2xs,
               ),
             ),
           ),

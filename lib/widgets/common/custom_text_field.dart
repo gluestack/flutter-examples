@@ -24,6 +24,11 @@ class CustomTextField extends StatelessWidget {
       inputFormatters: inputFormatters,
       size: GSSizes.$sm,
       variant: GSVariants.outline,
+      style: GSStyle(
+        onFocus: GSStyle(
+          borderColor: $GSColors.primary300,
+        ),
+      ),
       cursorHeight: 12,
       constraints: BoxConstraints(
         maxWidth: maxWidth,

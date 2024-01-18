@@ -18,34 +18,33 @@ class QRCodeSmallScreen extends StatelessWidget {
         sm: GSStyle(isVisible: true),
         md: GSStyle(isVisible: false),
         lg: GSStyle(isVisible: false),
-        bg: Theme.of(context).brightness == Brightness.dark
-            ? $GSColors.black
-            : $GSColors.white,
+        dark: GSStyle(
+          bg: $GSColors.darkBlue100,
+        ),
       ),
       child: SingleChildScrollView(
           child: GSVStack(
         children: [
           GSBox(
             style: GSStyle(
-              //  padding: const EdgeInsets.fromLTRB(50, 40, 50, 100),
-              bg: Theme.of(context).brightness == Brightness.dark
-                  ? $GSColors.black
-                  : $GSColors.white,
+              dark: GSStyle(
+                bg: $GSColors.darkBlue100,
+              ),
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.6,
             ),
             child: GSCenter(
               child: GSBox(
                 style: GSStyle(
-                  width: MediaQuery.of(context).size.height * 0.5,
-                  height: MediaQuery.of(context).size.height * 0.8,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 5,
-                  ),
-                  bg: Theme.of(context).brightness == Brightness.dark
-                      ? const Color(0xFF374151)
-                      : const Color(0xFFF5F3FF),
-                ),
+                    width: MediaQuery.of(context).size.height * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.8,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 5,
+                    ),
+                    bg: $GSColors.lightBlue50,
+                    dark: GSStyle(
+                      bg: $GSColors.darkBlue50,
+                    )),
                 child: GSVStack(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -69,24 +68,16 @@ class QRCodeSmallScreen extends StatelessWidget {
                             GSText(
                               text: GSStringConstants.kUserName,
                               style: GSStyle(
-                                  textStyle: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? $GSColors.white
-                                    : null,
-                              )),
+                                textStyle: TextStyle(
+                                  fontSize: $GSFontSize.$xs,
+                                ),
+                              ),
                             ),
                             GSText(
                               text: GSStringConstants.kUser,
                               style: GSStyle(
                                 textStyle: TextStyle(
-                                  fontSize: 10,
-                                  color: Theme.of(context).brightness ==
-                                          Brightness.dark
-                                      ? $GSColors.warmGray500
-                                      : null,
+                                  fontSize: $GSFontSize.$2xs,
                                 ),
                               ),
                             )

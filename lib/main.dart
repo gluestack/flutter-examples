@@ -1,3 +1,5 @@
+import 'package:gluestack_demo/utils/custom_colors.dart';
+
 import 'public.dart';
 
 void main() {
@@ -24,11 +26,16 @@ class _MyAppState extends State<MyApp> {
     return GluestackProvider(
       gluestackTokenConfig: GluestackTokenConfig(
         gsColorsToken: GSColorsToken(
-          primary300: Theme.of(context).colorScheme.primary,
-          primary400: Theme.of(context).colorScheme.primary,
-          primary500: Theme.of(context).colorScheme.primary,
-          primary600: Theme.of(context).colorScheme.primary,
-          primary700: Theme.of(context).colorScheme.primary,
+          primary300: CustomColors.themeColor,
+          primary400: CustomColors.themeColor,
+          primary500: CustomColors.themeColor,
+          primary600: CustomColors.themeColor,
+          purple100: CustomColors.buttonTextColor,
+          lightBlue50: CustomColors.contentLightBackgroundColor,
+          lightBlue100: CustomColors.lightBackground,
+          darkBlue50: CustomColors.contentDarkBackgroundColor,
+          darkBlue100: CustomColors.darkBackground,
+          darkBlue200: CustomColors.contentDarkBackground,
           backgroundLight800: Colors.grey.shade500,
           backgroundDark400: Colors.white,
           textDark200: Colors.white,
@@ -56,10 +63,10 @@ class _MyAppState extends State<MyApp> {
               },
               child: GSText(
                 style: GSStyle(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 4, 65, 116),
+                    fontSize: $GSFontSize.$lg,
+                    color: $GSColors.blue700,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -79,10 +86,10 @@ class _MyAppState extends State<MyApp> {
               },
               child: GSText(
                 style: GSStyle(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 4, 65, 116),
+                    fontSize: $GSFontSize.$lg,
+                    color: $GSColors.blue700,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -102,10 +109,10 @@ class _MyAppState extends State<MyApp> {
               },
               child: GSText(
                 style: GSStyle(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 4, 65, 116),
+                    fontSize: $GSFontSize.$lg,
+                    color: $GSColors.blue700,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -125,10 +132,10 @@ class _MyAppState extends State<MyApp> {
               },
               child: GSText(
                 style: GSStyle(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 4, 65, 116),
+                    fontSize: $GSFontSize.$lg,
+                    color: $GSColors.blue700,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

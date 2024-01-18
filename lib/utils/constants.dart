@@ -22,9 +22,6 @@ class GSStringConstants {
   static const String kNativeBaseLogo =
       "https://nativebase.io/img/nativebase-logo.png";
 
-  static const String kTutorProfileBio =
-      "A user profile is a collection of settings and info of a user. It contains \n critical information that is used to identify an individual";
-
   static List<String> imageUrls = [
     'https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'https://images.unsplash.com/photo-1701839339549-c19ef662105f?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -40,27 +37,30 @@ class GSStringConstants {
     'https://images.unsplash.com/photo-1701695318246-2d48c7f1cc63?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ];
 
-  static List<String> kTutorUserProfile = [
-    "Rax Martin",
-    "California",
-    "A user profile is a collection of settings and info of a user. It contains \n critical information that is used to identify an individual"
-  ];
+  static Map<String, String> kTutorUserProfile = {
+    'name': "Rax Martin",
+    'location': "California",
+    'description':
+        "A user profile is a collection of settings and info of a user. It contains \n critical information that is used to identify an individual"
+  };
 
-  static List<String> kUserReview = [
-    "Martin Henry",
-    "12 May 2021",
-    "I Loved the quality of the products. Highly recommended to everyone who is looking for comfortable outfits for themselves."
-  ];
+  static Map<String, String> kUserReview = {
+    'name': 'Martin Henry',
+    'date': '12 May 2021',
+    'description':
+        "I Loved the quality of the products. Highly recommended to everyone who is looking for comfortable outfits for themselves."
+  };
 
-  static List<String> kProductsDetails = [
-    "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2367&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "24th Sep 2018",
-    "843 Products",
-    "Postive Feedback",
-    "97%",
-    "Customers",
-    '50K'
-  ];
+  static Map<String, String> kProductsDetails = {
+    'imageUrl':
+        'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2367&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'date': '24th Sep 2018',
+    'products': '843 Products',
+    'buttonOne': "Postive Feedback",
+    'buttonOneHeader': "97%",
+    'buttonTwo': 'Customers',
+    'buttonTwoHeader': '50K'
+  };
 
   static const String kContinue = 'CONTINUE';
 

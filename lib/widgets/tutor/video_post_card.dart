@@ -10,9 +10,10 @@ class VideoPostCard extends StatelessWidget {
     return GSBox(
       style: GSStyle(
         height: 200,
-        bg: Theme.of(context).brightness == Brightness.dark
-            ? const Color(0xFF374151)
-            : $GSColors.warmGray100,
+        bg: $GSColors.warmGray100,
+        dark: GSStyle(
+          bg: $GSColors.darkBlue50,
+        ),
         borderRadius: 5,
       ),
       child: GSVStack(
@@ -27,18 +28,15 @@ class VideoPostCard extends StatelessWidget {
           GSCenter(
             child: GSBox(
               style: GSStyle(
-                padding: const EdgeInsets.only(
-                  top: 8,
+                padding: EdgeInsets.only(
+                  top: $GSSpace.$2,
                 ),
               ),
               child: GSText(
                 style: GSStyle(
                   textStyle: TextStyle(
-                    fontSize: 10.0,
+                    fontSize: $GSFontSize.$xs,
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? $GSColors.warmGray300
-                        : null,
                   ),
                 ),
                 text: post.title,

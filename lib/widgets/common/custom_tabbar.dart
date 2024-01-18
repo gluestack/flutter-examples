@@ -13,20 +13,15 @@ class CustomTabBar extends StatelessWidget {
         children: [
           GSBox(
             style: GSStyle(
-              bg: Theme.of(context).brightness == Brightness.dark
-                  ? const Color(0xFF374151)
-                  : $GSColors.warmGray100,
               borderRadius: 5.0,
               height: 35,
             ),
             child: TabBar(
               padding: EdgeInsets.zero,
-              dividerColor: Theme.of(context).brightness == Brightness.dark
-                  ? const Color(0xFF374151)
-                  : $GSColors.warmGray100,
-              labelStyle: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
+              dividerColor: Colors.transparent,
+              labelStyle: TextStyle(
+                fontSize: $GSFontSize.$xs,
+                fontWeight: FontWeight.bold,
               ),
               tabs: const [
                 Tab(text: 'Videos'),

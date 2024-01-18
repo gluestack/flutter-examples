@@ -14,25 +14,22 @@ class StartupIcon extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 5),
         height: 20,
         width: 62,
-        borderColor: Theme.of(context).colorScheme.secondary,
+        borderColor: $GSColors.backgroundLight800,
       ),
       child: GSHStack(
         children: [
           GSText(
             text: 'Startup',
             style: GSStyle(
-              textStyle: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w900,
+              textStyle: TextStyle(
+                fontSize: $GSFontSize.$2xs,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          GSIcon(
+          const GSIcon(
             icon: Icons.add,
             size: GSSizes.$xs,
-            style: GSStyle(
-              color: Theme.of(context).colorScheme.secondary,
-            ),
           )
         ],
       ),

@@ -18,9 +18,9 @@ class SellerDetailsSmallScreen extends StatelessWidget {
         sm: GSStyle(isVisible: true),
         md: GSStyle(isVisible: false),
         lg: GSStyle(isVisible: false),
-        bg: Theme.of(context).brightness == Brightness.dark
-            ? $GSColors.black
-            : $GSColors.white,
+        dark: GSStyle(
+          bg: $GSColors.darkBlue100,
+        ),
       ),
       child: SingleChildScrollView(
         child: GSVStack(
@@ -35,25 +35,12 @@ class SellerDetailsSmallScreen extends StatelessWidget {
             ),
             const ProductDetailsHeader(),
             GSText(
-              text: GSStringConstants.kProductsDetails[1],
+              text: GSStringConstants.kProductsDetails['date']!,
               size: GSSizes.$xs,
-              style: GSStyle(
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? $GSColors.warmGray200
-                    : null,
-              ),
             ),
             GSText(
-              text: GSStringConstants.kProductsDetails[2],
+              text: GSStringConstants.kProductsDetails['products']!,
               size: GSSizes.$xs,
-              style: GSStyle(
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? $GSColors.white
-                      : null,
-                ),
-              ),
             ),
             const SizedBox(
               height: 10,
@@ -62,13 +49,15 @@ class SellerDetailsSmallScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 CustomTitleBox(
-                  description: GSStringConstants.kProductsDetails[3],
-                  header: GSStringConstants.kProductsDetails[4],
+                  description: GSStringConstants.kProductsDetails['buttonOne']!,
+                  header:
+                      GSStringConstants.kProductsDetails['buttonOneHeader']!,
                   width: MediaQuery.of(context).size.width * 0.45,
                 ),
                 CustomTitleBox(
-                  description: GSStringConstants.kProductsDetails[5],
-                  header: GSStringConstants.kProductsDetails[6],
+                  description: GSStringConstants.kProductsDetails['buttonTwo']!,
+                  header:
+                      GSStringConstants.kProductsDetails['buttonTwoHeader']!,
                   width: MediaQuery.of(context).size.width * 0.45,
                 )
               ],
@@ -80,19 +69,16 @@ class SellerDetailsSmallScreen extends StatelessWidget {
               length: 2,
               child: GSVStack(
                 children: [
-                  GSBox(
+                  const GSBox(
                     child: TabBar(
-                      dividerColor:
-                          Theme.of(context).brightness == Brightness.dark
-                              ? $GSColors.black
-                              : $GSColors.white,
+                      dividerColor: Colors.transparent,
                       labelPadding: EdgeInsets.zero,
-                      labelStyle: const TextStyle(
+                      labelStyle: TextStyle(
                         fontSize: 12,
                         letterSpacing: 0.8,
                         fontWeight: FontWeight.w600,
                       ),
-                      tabs: const [
+                      tabs: [
                         Tab(text: GSStringConstants.kReviews),
                         Tab(text: GSStringConstants.kOtherItems),
                       ],

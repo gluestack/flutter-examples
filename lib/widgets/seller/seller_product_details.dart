@@ -13,16 +13,17 @@ class SellerDetailsProductDetails extends StatelessWidget {
       child: ListView(
         children: [
           const ProductDetailsHeader(),
-          GSText(
+          const GSText(
             text: "24th Sep 2018",
             size: GSSizes.$xs,
-            style: GSStyle(),
           ),
           GSText(
             text: "843 Products",
             size: GSSizes.$xs,
             style: GSStyle(
-                textStyle: const TextStyle(fontWeight: FontWeight.w600)),
+                textStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+            )),
           ),
           const SizedBox(
             height: 10,
@@ -45,10 +46,12 @@ class SellerDetailsProductDetails extends StatelessWidget {
           ),
           GSButton(
             variant: GSVariants.solid,
-            style: GSStyle(md: GSStyle(width: 200)),
             child: GSText(
               text: GSStringConstants.kContinue,
-              style: GSStyle(textStyle: TextStyle(color: $GSColors.white)),
+              style: GSStyle(
+                  textStyle: TextStyle(
+                color: $GSColors.white,
+              )),
             ),
             onPressed: () {},
           ),
@@ -61,15 +64,11 @@ class SellerDetailsProductDetails extends StatelessWidget {
               children: [
                 GSBox(
                   child: TabBar(
-                    dividerColor:
-                        Theme.of(context).brightness == Brightness.dark
-                            ? $GSColors.black
-                            : $GSColors.white,
+                    dividerColor: Colors.transparent,
                     labelPadding: EdgeInsets.zero,
-                    labelStyle: const TextStyle(
-                      fontSize: 12,
-                      letterSpacing: 0.8,
-                      fontWeight: FontWeight.w600,
+                    labelStyle: TextStyle(
+                      fontSize: $GSFontSize.$xs,
+                      fontWeight: FontWeight.bold,
                     ),
                     tabs: const [
                       Tab(text: 'Reviews'),

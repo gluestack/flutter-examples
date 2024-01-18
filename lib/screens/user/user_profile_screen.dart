@@ -66,7 +66,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                       ),
                       child: UserProfileForm(
                         formWidth: MediaQuery.of(context).size.width * 0.999,
-                        formHeight: MediaQuery.of(context).size.width * 0.98,
+                        formHeight: MediaQuery.of(context).size.width * 1.2,
                         formTextFieldWidth:
                             MediaQuery.of(context).size.width * 0.42,
                       ),

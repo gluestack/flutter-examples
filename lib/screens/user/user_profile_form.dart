@@ -23,7 +23,10 @@ class _UserProfileFormState extends State<UserProfileForm> {
   Widget build(BuildContext context) {
     return GSBox(
       style: GSStyle(
-        bg: Theme.of(context).colorScheme.background,
+        bg: $GSColors.white,
+        dark: GSStyle(
+          bg: $GSColors.darkBlue100,
+        ),
         borderRadius: 3.5,
         width: widget.formWidth ?? MediaQuery.of(context).size.width * 0.55,
         height: widget.formHeight ?? MediaQuery.of(context).size.height * 0.70,
@@ -55,13 +58,21 @@ class _UserProfileFormState extends State<UserProfileForm> {
                       if (_formKey.currentState!.validate()) {}
                     },
                     variant: GSVariants.outline,
+                    style: GSStyle(
+                      dark: GSStyle(
+                        borderColor: $GSColors.warmGray400,
+                      ),
+                    ),
                     size: GSSizes.$xs,
                     child: GSHStack(
                       children: [
                         GSButtonIcon(
                           icon: Icons.edit,
                           style: GSStyle(
-                              color: Theme.of(context).colorScheme.primary),
+                            dark: GSStyle(
+                              color: $GSColors.warmGray400,
+                            ),
+                          ),
                         ),
                         GSBox(
                           style: GSStyle(
@@ -71,7 +82,12 @@ class _UserProfileFormState extends State<UserProfileForm> {
                             text: GSStringConstants.kEditProfile,
                             style: GSStyle(
                               textStyle: TextStyle(
-                                color: Theme.of(context).colorScheme.primary,
+                                color: $GSColors.primary300,
+                              ),
+                              dark: GSStyle(
+                                textStyle: TextStyle(
+                                  color: $GSColors.warmGray400,
+                                ),
                               ),
                             ),
                           ),

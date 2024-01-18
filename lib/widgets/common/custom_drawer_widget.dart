@@ -23,9 +23,15 @@ class CustomDrawerWidget extends StatelessWidget {
         ),
         md: GSStyle(
           isVisible: true,
+          dark: GSStyle(
+            bg: $GSColors.darkBlue200,
+          ),
         ),
         lg: GSStyle(
           isVisible: true,
+          dark: GSStyle(
+            bg: $GSColors.darkBlue200,
+          ),
         ),
       ),
       child: ListView(
@@ -46,35 +52,19 @@ class CustomDrawerWidget extends StatelessWidget {
             height: 10,
           ),
           GSCenter(
-            child: GSText(
+            child: GSHeading(
               text: userName,
-              style: GSStyle(
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? $GSColors.white
-                      : null,
-                ),
-              ),
+              style: GSStyle(textStyle: TextStyle(fontSize: $GSFontSize.$md)),
             ),
-          ),
-          const SizedBox(
-            height: 3,
           ),
           GSCenter(
             child: GSText(
               text: userEmail,
               size: GSSizes.$xs,
-              style: GSStyle(
-                  textStyle: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? $GSColors.warmGray500
-                    : null,
-              )),
             ),
           ),
           const SizedBox(
-            height: 3,
+            height: 5,
           ),
           GSDivider(
             orientation: GSOrientations.vertical,

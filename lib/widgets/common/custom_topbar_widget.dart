@@ -32,6 +32,18 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
             lg: GSStyle(
               isVisible: true,
             ),
+            dark: GSStyle(
+              xs: GSStyle(isVisible: false),
+              sm: GSStyle(isVisible: false),
+              md: GSStyle(
+                isVisible: true,
+                bg: $GSColors.darkBlue200,
+              ),
+              lg: GSStyle(
+                isVisible: true,
+                   bg: $GSColors.darkBlue200,
+              ),
+            ),
             height: 60,
           ),
           child: GSHStack(

@@ -14,11 +14,26 @@ class TutorProfileContentScreen extends StatelessWidget {
           padding:
               EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.02),
           sm: GSStyle(isVisible: false),
-          md: GSStyle(isVisible: true),
-          lg: GSStyle(isVisible: true),
-          bg: Theme.of(context).brightness == Brightness.dark
-              ? const Color(0xFF374151)
-              : const Color(0xFFF5F3FF),
+          md: GSStyle(
+            isVisible: true,
+            bg: $GSColors.lightBlue50,
+          ),
+          lg: GSStyle(
+            isVisible: true,
+            bg: $GSColors.lightBlue50,
+          ),
+          dark: GSStyle(
+            xs: GSStyle(isVisible: false),
+            sm: GSStyle(isVisible: false),
+            md: GSStyle(
+              isVisible: true,
+              bg: $GSColors.darkBlue50,
+            ),
+            lg: GSStyle(
+              isVisible: true,
+              bg: $GSColors.darkBlue50,
+            ),
+          ),
         ),
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
@@ -30,16 +45,8 @@ class TutorProfileContentScreen extends StatelessWidget {
                       left: MediaQuery.of(context).size.width * 0.11,
                       bottom: 8),
                 ),
-                child: CustomBackButton(
+                child: const CustomBackButton(
                   buttonText: GSStringConstants.kTutorProfile,
-                  iconColor: Theme.of(context).brightness == Brightness.dark
-                      ? GSStyle(color: $GSColors.white)
-                      : null,
-                  textStyle: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? $GSColors.white
-                        : null,
-                  ),
                 ),
               ),
               const TutorProfileMainContent(),
