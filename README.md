@@ -21,6 +21,9 @@ A comprehensive starter example app to kick-start your next mobile application u
 
 Please find the screenshots attached of the example starter app below.
 
+**WEB VIEW**
+
+
 **Tutor Profile**
 
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 41 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/e0c9671e-2eb9-4fb5-983f-583b7622d6ba">
@@ -48,6 +51,31 @@ Please find the screenshots attached of the example starter app below.
 <img width="1280" alt="Screenshot 2024-01-19 at 1 29 28 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d20fa97b-6334-4d36-8737-11e2743a0490">
 
 
+**MOBILE APP VIEW**
+
+**Tutor Profile**
+
+<img width="277" alt="Screenshot 2024-01-19 at 1 53 04 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/34eddc1c-927f-4f2e-8657-fcb602c2a851">
+
+<img width="282" alt="Screenshot 2024-01-19 at 1 52 27 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/451def36-5e63-4cd4-84c2-da93105e9248">
+
+**Cool store**
+
+<img width="280" alt="Screenshot 2024-01-19 at 1 55 51 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/e5ef8171-8c7e-483e-864d-df7b622ef36f">
+
+<img width="281" alt="Screenshot 2024-01-19 at 1 55 36 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d3c8e5ba-d540-4259-9761-4f5ab65cb876">
+
+**Profile**
+
+<img width="281" alt="Screenshot 2024-01-19 at 1 47 03 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/779153f9-5587-49ba-8b78-59741e3d5caa">
+
+<img width="283" alt="Screenshot 2024-01-19 at 1 57 54 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/763c5cb2-64f5-49c3-9f7d-e10e206e82d7">
+
+**QR Code**
+
+<img width="280" alt="Screenshot 2024-01-19 at 1 56 14 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/caf4e92b-0e18-49de-9143-8d40b7651619">
+
+<img width="281" alt="Screenshot 2024-01-19 at 1 56 35 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/cf7ffe21-27f1-4977-a032-2cdd553855b6">
 
 
 ## 🚀 Getting Started
