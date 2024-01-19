@@ -27,6 +27,8 @@ Please find the screenshots attached of the example starter app below.
 
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 50 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d3f61317-59df-4263-a8cb-aa3a6740230c">
 
+<br>
+
 **Cool store**
 
 <img width="1280" alt="Screenshot 2024-01-19 at 1 29 10 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/30e3adfd-7540-4dc9-882f-62586f8867c9">
