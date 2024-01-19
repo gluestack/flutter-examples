@@ -17,7 +17,7 @@ class UserProfileSideDrawerTile extends StatelessWidget {
           EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.020),
       leading: GSIcon(
         icon: icon,
-        size: GSSizes.$md,
+        size: GSIconSizes.$md,
       ),
       title: GSText(
         text: label,

@@ -22,8 +22,8 @@ class CustomTextField extends StatelessWidget {
     return GSInput(
       keyboardType: keyboardType,
       inputFormatters: inputFormatters,
-      size: GSSizes.$sm,
-      variant: GSVariants.outline,
+      size: GSInputSizes.$sm,
+      variant: GSInputVariants.outline,
       style: GSStyle(
         onFocus: GSStyle(
           borderColor: $GSColors.primary300,

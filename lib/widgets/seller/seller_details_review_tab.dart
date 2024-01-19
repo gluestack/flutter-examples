@@ -18,8 +18,8 @@ class SellerDetailsReviewTab extends StatelessWidget {
                 const GSImage(
                   path: GSStringConstants.kUserImageUrl,
                   imageType: GSImageType.network,
-                  borderRadius: GSBorderRadius.$full,
-                  size: GSSizes.$2xs,
+                  borderRadius: GSImageRadius.$full,
+                  size: GSImageSizes.$2xs,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(
@@ -39,15 +39,15 @@ class SellerDetailsReviewTab extends StatelessWidget {
                     GSHStack(
                       children: [
                         GSIcon(
-                            size: GSSizes.$xs,
+                            size: GSIconSizes.$xs,
                             style: GSStyle(color: $GSColors.yellow500),
                             icon: Icons.star),
                         GSIcon(
-                            size: GSSizes.$xs,
+                            size: GSIconSizes.$xs,
                             style: GSStyle(color: $GSColors.yellow500),
                             icon: Icons.star),
                         GSIcon(
-                          size: GSSizes.$xs,
+                          size: GSIconSizes.$xs,
                           style: GSStyle(color: $GSColors.yellow500),
                           icon: Icons.star,
                         )

@@ -49,21 +49,21 @@ class _UserProfileFormState extends State<UserProfileForm> {
                   const GSImage(
                     path: GSStringConstants.kUserImageUrl,
                     imageType: GSImageType.network,
-                    borderRadius: GSBorderRadius.$full,
-                    size: GSSizes.$sm,
+                    borderRadius: GSImageRadius.$full,
+                    size: GSImageSizes.$sm,
                     fit: BoxFit.cover,
                   ),
                   GSButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {}
                     },
-                    variant: GSVariants.outline,
+                    variant: GSButtonVariants.outline,
                     style: GSStyle(
                       dark: GSStyle(
                         borderColor: $GSColors.warmGray400,
                       ),
                     ),
-                    size: GSSizes.$xs,
+                    size: GSButtonSizes.$xs,
                     child: GSHStack(
                       children: [
                         GSButtonIcon(
