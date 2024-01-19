@@ -46,19 +46,28 @@ class SellerDetailsSmallScreen extends StatelessWidget {
               height: 10,
             ),
             GSHStack(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CustomTitleBox(
-                  description: GSStringConstants.kProductsDetails['buttonOne']!,
-                  header:
-                      GSStringConstants.kProductsDetails['buttonOneHeader']!,
-                  width: MediaQuery.of(context).size.width * 0.45,
+                Expanded(
+                  child: CustomTitleBox(
+                    description:
+                        GSStringConstants.kProductsDetails['buttonOne']!,
+                    header:
+                        GSStringConstants.kProductsDetails['buttonOneHeader']!,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                  ),
                 ),
-                CustomTitleBox(
-                  description: GSStringConstants.kProductsDetails['buttonTwo']!,
-                  header:
-                      GSStringConstants.kProductsDetails['buttonTwoHeader']!,
-                  width: MediaQuery.of(context).size.width * 0.45,
+                const SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: CustomTitleBox(
+                    description:
+                        GSStringConstants.kProductsDetails['buttonTwo']!,
+                    header:
+                        GSStringConstants.kProductsDetails['buttonTwoHeader']!,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                  ),
                 )
               ],
             ),
