@@ -21,16 +21,21 @@ A comprehensive starter example app to kick-start your next mobile application u
 
 Please find the screenshots attached of the example starter app below.
 
-<img width="1280" alt="Screenshot 2024-01-19 at 1 29 28 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d20fa97b-6334-4d36-8737-11e2743a0490">
-<img width="1280" alt="Screenshot 2024-01-19 at 1 29 21 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/59be2d4f-7e37-4fdc-86b5-ee413eef7dd8">
-<img width="1280" alt="Screenshot 2024-01-19 at 1 29 10 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/30e3adfd-7540-4dc9-882f-62586f8867c9">
-<img width="1280" alt="Screenshot 2024-01-19 at 1 29 00 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/c751e89f-5bbc-48f7-bb1a-a2676126ae05">
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 50 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d3f61317-59df-4263-a8cb-aa3a6740230c">
+
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 41 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/e0c9671e-2eb9-4fb5-983f-583b7622d6ba">
+
+<img width="1280" alt="Screenshot 2024-01-19 at 1 29 10 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/30e3adfd-7540-4dc9-882f-62586f8867c9">
+
+<img width="1280" alt="Screenshot 2024-01-19 at 1 29 00 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/c751e89f-5bbc-48f7-bb1a-a2676126ae05">
+
+<img width="1280" alt="Screenshot 2024-01-19 at 1 29 21 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/59be2d4f-7e37-4fdc-86b5-ee413eef7dd8">
+
+<img width="1280" alt="Screenshot 2024-01-19 at 1 29 28 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/d20fa97b-6334-4d36-8737-11e2743a0490">
+
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 25 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/80417dba-1a94-462c-8bb8-582b1d74b2b8">
+
 <img width="1280" alt="Screenshot 2024-01-19 at 1 28 14 PM" src="https://github.com/gluestack/flutter-examples/assets/94161015/a3a139e0-4567-40be-8df2-9c5b4ca2a50a">
-
-
 
 
 ## 🚀 Getting Started
