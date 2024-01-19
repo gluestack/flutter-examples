@@ -29,7 +29,7 @@ class StartupIcon extends StatelessWidget {
           ),
           const GSIcon(
             icon: Icons.add,
-            size: GSSizes.$xs,
+            size: GSIconSizes.$xs,
           )
         ],
       ),

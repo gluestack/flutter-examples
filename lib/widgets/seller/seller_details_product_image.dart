@@ -20,7 +20,7 @@ class SellerDetailsProductImage extends StatelessWidget {
           height: height ?? MediaQuery.of(context).size.height * 0.7,
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6)),
       child: GSImage(
-        size: GSSizes.$md,
+        size: GSImageSizes.$md,
         fit: BoxFit.cover,
         path: GSStringConstants.kProductsDetails['imageUrl']!,
         imageType: GSImageType.network,

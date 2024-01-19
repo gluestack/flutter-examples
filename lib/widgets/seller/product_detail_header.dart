@@ -21,7 +21,7 @@ class ProductDetailsHeader extends StatelessWidget {
         GSHStack(
           children: [
             GSIcon(
-                size: GSSizes.$xs,
+                size: GSIconSizes.$xs,
                 style: GSStyle(color: $GSColors.yellow500),
                 icon: Icons.star),
             GSText(
