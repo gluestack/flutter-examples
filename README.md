@@ -104,12 +104,9 @@ flutter run
 
 ## 📖 Documentation
 
-For a deep dive into the components, structure, and configurations, please refer to our [detailed documentation](https://ui.gluestack.io/docs/getting-started/installation).
+For a deep dive into the components, structure, and configurations, please refer to our [detailed documentation](https://github.com/gluestack/gluestack-ui-flutter).
 
 ## 📄 License
 
 This project is licensed under the [MIT License](https://opensource.org/license/mit/).
 
-```
-
-```
