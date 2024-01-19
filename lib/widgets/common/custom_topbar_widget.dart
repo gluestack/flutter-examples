@@ -41,7 +41,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
               ),
               lg: GSStyle(
                 isVisible: true,
-                   bg: $GSColors.darkBlue200,
+                bg: $GSColors.darkBlue200,
               ),
             ),
             height: 60,
@@ -95,7 +95,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
             icon: Theme.of(context).brightness == Brightness.dark
                 ? Icons.light_mode
                 : Icons.dark_mode,
-            size: GSSizes.$lg,
+            size: GSIconSizes.$lg,
           ),
         ),
         const SizedBox(
@@ -104,8 +104,8 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
         GSImage(
           path: widget.profileImageUrl,
           imageType: GSImageType.network,
-          borderRadius: GSBorderRadius.$full,
-          size: GSSizes.$2xs,
+          borderRadius: GSImageRadius.$full,
+          size: GSImageSizes.$2xs,
           fit: BoxFit.cover,
         ),
       ],
@@ -115,23 +115,28 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
   GSHStack _mediumScreenLeftIcon(BuildContext context) {
     return GSHStack(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         GSIcon(
           icon: Icons.menu,
-          size: GSSizes.$sm,
+          size: GSIconSizes.$sm,
           style: GSStyle(
             sm: GSStyle(
               isVisible: false,
             ),
           ),
         ),
-        const GSImage(
-          path: GSStringConstants.kNativeBaseLogo,
-          imageType: GSImageType.network,
-          size: GSSizes.$xl,
-          fit: BoxFit.fitWidth,
+        GSBox(
+          style: GSStyle(padding: const EdgeInsets.only(left: 10, top: 2)),
+          child: GSImage(
+            path: Theme.of(context).brightness == Brightness.dark
+                ? GSStringConstants.kGluestackDarkLogo
+                : GSStringConstants.kGluestackLightLogo,
+            imageType: GSImageType.asset,
+            size: GSImageSizes.$xl,
+            fit: BoxFit.fitWidth,
+          ),
         ),
-        const StartupIcon(),
       ],
     );
   }

@@ -92,7 +92,7 @@ class _CustomTopBarSmallScreenWidgetState
                         icon: Theme.of(context).brightness == Brightness.dark
                             ? Icons.light_mode
                             : Icons.dark_mode,
-                        size: GSSizes.$lg,
+                        size: GSIconSizes.$lg,
                       ),
                     ),
                     const SizedBox(
@@ -102,7 +102,7 @@ class _CustomTopBarSmallScreenWidgetState
                       onPress: widget.onTrailingIconTap,
                       child: const GSIcon(
                         icon: Icons.more_vert,
-                        size: GSSizes.$lg,
+                        size: GSIconSizes.$lg,
                       ),
                     ),
                   ],

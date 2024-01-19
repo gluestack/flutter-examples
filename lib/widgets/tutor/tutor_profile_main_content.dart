@@ -31,7 +31,7 @@ class TutorProfileMainContent extends StatelessWidget {
           ),
           GSCenter(
             child: GSAvatar(
-              size: GSSizes.$md,
+              size: GSAvatarSizes.$md,
               style: GSStyle(bg: $GSColors.backgroundLight600),
               avatarBadge: GSAvatarBadge(
                 style: GSStyle(
