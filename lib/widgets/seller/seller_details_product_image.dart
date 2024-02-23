@@ -23,7 +23,7 @@ class SellerDetailsProductImage extends StatelessWidget {
         size: GSImageSizes.$md,
         fit: BoxFit.cover,
         path: GSStringConstants.kProductsDetails['imageUrl']!,
-        imageType: GSImageType.network,
+        imageType: GSImageType.asset,
       ),
     );
   }

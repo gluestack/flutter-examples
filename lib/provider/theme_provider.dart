@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:gluestack_demo/public.dart';
 
 class ThemeProvider extends ChangeNotifier {
-  ThemeMode _themeMode = ThemeMode.light;
+  GSThemeMode _themeMode = GSThemeMode.light;
 
-  ThemeMode get themeMode => _themeMode;
+  GSThemeMode get themeMode => _themeMode;
 
   void toggleTheme() {
     _themeMode =
-        _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+        _themeMode == GSThemeMode.light ? GSThemeMode.dark : GSThemeMode.light;
     notifyListeners();
   }
 }

@@ -48,7 +48,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
                 children: [
                   const GSImage(
                     path: GSStringConstants.kUserImageUrl,
-                    imageType: GSImageType.network,
+                    imageType: GSImageType.asset,
                     borderRadius: GSImageRadius.$full,
                     size: GSImageSizes.$sm,
                     fit: BoxFit.cover,
@@ -111,6 +111,9 @@ class _UserProfileFormState extends State<UserProfileForm> {
                     validator: (value) =>
                         CommonUtils.validateName(value, 'first'),
                   ),
+                  // SizedBox(
+                  //   width: 20,
+                  // ),
                   CustomTextField(
                     labelText: "Last Name",
                     maxWidth: widget.formTextFieldWidth ??
@@ -126,7 +129,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
               ),
               CustomTextField(
                 labelText: "Email",
-                maxWidth: MediaQuery.of(context).size.width * 0.55,
+                maxWidth: MediaQuery.of(context).size.width * 0.95,
                 maxHeight: MediaQuery.of(context).size.width * 0.02,
                 validator: (value) => CommonUtils.validateEmail(value),
               ),
@@ -135,7 +138,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
               ),
               CustomTextField(
                 labelText: "Contact Number",
-                maxWidth: MediaQuery.of(context).size.width * 0.55,
+                maxWidth: MediaQuery.of(context).size.width * 0.95,
                 maxHeight: MediaQuery.of(context).size.width * 0.02,
                 keyboardType: TextInputType.number,
                 inputFormatters: [
@@ -149,7 +152,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
               ),
               CustomTextField(
                 labelText: "Address",
-                maxWidth: MediaQuery.of(context).size.width * 0.55,
+                maxWidth: MediaQuery.of(context).size.width * 0.95,
                 maxHeight: MediaQuery.of(context).size.width * 0.02,
                 validator: (value) {
                   if (value == null || value.isEmpty) {

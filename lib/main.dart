@@ -1,4 +1,6 @@
+import 'package:gluestack_demo/router/router.dart';
 import 'package:gluestack_demo/utils/custom_colors.dart';
+import 'package:go_router/go_router.dart';
 
 import 'public.dart';
 
@@ -42,109 +44,109 @@ class _MyAppState extends State<MyApp> {
           backgroundLight200: Colors.grey.shade400.withOpacity(0.15),
         ),
       ),
-      child: MaterialApp(
-        navigatorKey: navigatorKey,
-        title: 'Gluestack Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.light(),
-        darkTheme: ThemeData.dark(),
+      child: GSApp.router(
         themeMode: Provider.of<ThemeProvider>(context).themeMode,
-        home: GSVStack(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () {
-                navigatorKey.currentState!.push(
-                  MaterialPageRoute(
-                    builder: (context) => const UserProfileScreen(),
-                  ),
-                );
-              },
-              child: GSText(
-                style: GSStyle(
-                  textStyle: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: $GSFontSize.$lg,
-                    color: $GSColors.blue700,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                text: 'User Profile Screen',
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            GestureDetector(
-              onTap: () {
-                navigatorKey.currentState!.push(
-                  MaterialPageRoute(
-                    builder: (context) => const TutorProfileScreen(),
-                  ),
-                );
-              },
-              child: GSText(
-                style: GSStyle(
-                  textStyle: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: $GSFontSize.$lg,
-                    color: $GSColors.blue700,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                text: 'Tutor Profile Screen',
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            GestureDetector(
-              onTap: () {
-                navigatorKey.currentState!.push(
-                  MaterialPageRoute(
-                    builder: (context) => const SellerDetailsScreen(),
-                  ),
-                );
-              },
-              child: GSText(
-                style: GSStyle(
-                  textStyle: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: $GSFontSize.$lg,
-                    color: $GSColors.blue700,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                text: 'Seller Details Screen',
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            GestureDetector(
-              onTap: () {
-                navigatorKey.currentState!.push(
-                  MaterialPageRoute(
-                    builder: (context) => const QRCodeScreen(),
-                  ),
-                );
-              },
-              child: GSText(
-                style: GSStyle(
-                  textStyle: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: $GSFontSize.$lg,
-                    color: $GSColors.blue700,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                text: 'QR Code Screen',
-              ),
-            ),
-          ],
-        ),
+        debugShowCheckedModeBanner: false,
+        darkTheme: GSThemeData(
+            brightness: Brightness.dark,
+            scaffoldBackgroundColor: const Color(0xFF171717)),
+        theme: GSThemeData(scaffoldBackgroundColor: Colors.white),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        routerConfig: router,
       ),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GSVStack(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            context.go("/user-profile");
+          },
+          child: GSText(
+            style: GSStyle(
+              textStyle: TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: $GSFontSize.$lg,
+                color: $GSColors.blue700,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            text: 'User Profile Screen',
+          ),
+        ),
+        const SizedBox(
+          height: 50,
+        ),
+        GestureDetector(
+          onTap: () {
+            context.go("/tutor-profile");
+          },
+          child: GSText(
+            style: GSStyle(
+              textStyle: TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: $GSFontSize.$lg,
+                color: $GSColors.blue700,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            text: 'Tutor Profile Screen',
+          ),
+        ),
+        const SizedBox(
+          height: 50,
+        ),
+        GestureDetector(
+          onTap: () {
+            context.go("/seller-details");
+          },
+          child: GSText(
+            style: GSStyle(
+              textStyle: TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: $GSFontSize.$lg,
+                color: $GSColors.blue700,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            text: 'Seller Details Screen',
+          ),
+        ),
+        const SizedBox(
+          height: 50,
+        ),
+        GestureDetector(
+          onTap: () {
+            context.go("/qr-code");
+          },
+          child: GSText(
+            style: GSStyle(
+              textStyle: TextStyle(
+                decoration: TextDecoration.none,
+                fontSize: $GSFontSize.$lg,
+                color: $GSColors.blue700,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            text: 'QR Code Screen',
+          ),
+        ),
+      ],
     );
   }
 }

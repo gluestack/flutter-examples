@@ -20,26 +20,17 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GSInput(
-      keyboardType: keyboardType,
-      inputFormatters: inputFormatters,
       size: GSInputSizes.$sm,
       variant: GSInputVariants.outline,
-      style: GSStyle(
-        onFocus: GSStyle(
-          borderColor: $GSColors.primary300,
-        ),
-      ),
-      cursorHeight: 12,
+      hintText: labelText,
       constraints: BoxConstraints(
         maxWidth: maxWidth,
-        maxHeight: maxHeight,
+        // maxHeight: maxHeight,
       ),
-      labelText: labelText,
-      validator: validator,
-      labelStyle: const TextStyle(fontSize: 12),
-      errorStyle: const TextStyle(
-        fontSize: 7,
-      ),
+
+      // style: GSStyle(
+      //   width: 300,
+      // ),
     );
   }
 }

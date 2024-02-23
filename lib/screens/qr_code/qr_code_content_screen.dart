@@ -71,7 +71,7 @@ class QRCodeContentScreen extends StatelessWidget {
                           children: [
                             GSImage(
                               path: GSStringConstants.kUserImageUrl,
-                              imageType: GSImageType.network,
+                              imageType: GSImageType.asset,
                               borderRadius: GSImageRadius.$full,
                               style: GSStyle(width: 35, height: 35),
                               fit: BoxFit.cover,
@@ -113,7 +113,7 @@ class QRCodeContentScreen extends StatelessWidget {
                             height: 150.0,
                           ),
                           fit: BoxFit.cover,
-                          imageType: GSImageType.network,
+                          imageType: GSImageType.asset,
                           path: GSStringConstants.kQRCodeImageUrl,
                         ),
                       ],
