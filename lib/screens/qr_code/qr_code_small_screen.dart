@@ -94,7 +94,7 @@ class QRCodeSmallScreen extends StatelessWidget {
                         height: 150.0,
                       ),
                       fit: BoxFit.cover,
-                      imageType: GSImageType.asset,
+                      imageType: GSImageType.network,
                       path: GSStringConstants.kQRCodeImageUrl,
                     ),
                   ],

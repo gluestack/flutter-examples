@@ -1,7 +1,8 @@
 class GSStringConstants {
   static const String kUserImageUrl = "assets/user.jpg";
 
-  static const String kQRCodeImageUrl = "assets/qr-code.png";
+  static const String kQRCodeImageUrl =
+      "https://support.thinkific.com/hc/article_attachments/360042081334/5d37325ea1ff6.png";
   static const String kUserEmail = 'janedoe@mydomain.com';
   static const String kUser = 'jane@mydomain';
   static const String kUserName = 'Jane Doe';
