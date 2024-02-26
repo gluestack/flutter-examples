@@ -35,10 +35,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^6.1.1
+  go_router: ^12.1.1
+
   gluestack_ui:
     git:
       url: https://github.com/gluestack/gluestack-ui-flutter.git
-      ref: development
+      ref: fix/dev-core-merge
 
 dev_dependencies:
   flutter_test:

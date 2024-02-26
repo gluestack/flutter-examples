@@ -15,6 +15,9 @@ class UserProfileScreenDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: GSTheme.of(context).brightness == Brightness.dark
+          ? $GSColors.darkBlue200
+          : null,
       width: 200,
       child: ListView(
         children: [

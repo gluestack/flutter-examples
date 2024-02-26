@@ -89,7 +89,7 @@ class _CustomTopBarSmallScreenWidgetState
                         themeProvider.toggleTheme();
                       },
                       child: GSIcon(
-                        icon: Theme.of(context).brightness == Brightness.dark
+                        icon: GSTheme.of(context).brightness == Brightness.dark
                             ? Icons.light_mode
                             : Icons.dark_mode,
                         size: GSIconSizes.$lg,

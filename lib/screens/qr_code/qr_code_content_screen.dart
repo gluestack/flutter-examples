@@ -115,7 +115,7 @@ class QRCodeContentScreen extends StatelessWidget {
                           fit: BoxFit.cover,
                           imageType: GSImageType.network,
                           path: GSStringConstants.kQRCodeImageUrl,
-                        ),
+                        )
                       ],
                     ),
                   ),

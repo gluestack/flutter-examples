@@ -92,7 +92,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
             themeProvider.toggleTheme();
           },
           child: GSIcon(
-            icon: Theme.of(context).brightness == Brightness.dark
+            icon: GSTheme.of(context).brightness == Brightness.dark
                 ? Icons.light_mode
                 : Icons.dark_mode,
             size: GSIconSizes.$lg,
@@ -129,7 +129,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
         GSBox(
           style: GSStyle(padding: const EdgeInsets.only(left: 10, top: 2)),
           child: GSImage(
-            path: Theme.of(context).brightness == Brightness.dark
+            path: GSTheme.of(context).brightness == Brightness.dark
                 ? GSStringConstants.kGluestackDarkLogo
                 : GSStringConstants.kGluestackLightLogo,
             imageType: GSImageType.asset,

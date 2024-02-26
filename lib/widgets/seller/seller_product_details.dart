@@ -45,6 +45,7 @@ class SellerDetailsProductDetails extends StatelessWidget {
             height: 10,
           ),
           GSButton(
+            style: GSStyle(width: double.infinity),
             variant: GSButtonVariants.solid,
             child: GSText(
               text: GSStringConstants.kContinue,
