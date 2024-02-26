@@ -19,7 +19,7 @@ class TutorProfileMainContent extends StatelessWidget {
         bg: $GSColors.white,
         borderRadius: 3.5,
         width: boxWidth ?? MediaQuery.of(context).size.width * 0.60,
-        height: boxHeight ?? MediaQuery.of(context).size.height * 0.9,
+        height: boxHeight ?? MediaQuery.of(context).size.height * 1.5,
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * 0.05,
         ),

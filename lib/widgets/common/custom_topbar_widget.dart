@@ -132,7 +132,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
             path: GSTheme.of(context).brightness == Brightness.dark
                 ? GSStringConstants.kGluestackDarkLogo
                 : GSStringConstants.kGluestackLightLogo,
-            imageType: GSImageType.network,
+            imageType: GSImageType.asset,
             size: GSImageSizes.$xl,
             fit: BoxFit.fitWidth,
           ),
