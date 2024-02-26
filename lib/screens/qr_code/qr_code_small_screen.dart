@@ -54,7 +54,7 @@ class QRCodeSmallScreen extends StatelessWidget {
                       children: [
                         GSImage(
                           path: GSStringConstants.kUserImageUrl,
-                          imageType: GSImageType.asset,
+                          imageType: GSImageType.network,
                           borderRadius: GSImageRadius.$full,
                           style: GSStyle(width: 35, height: 35),
                           fit: BoxFit.cover,

@@ -24,7 +24,7 @@ class UserProfileScreenDrawer extends StatelessWidget {
           GSCenter(
             child: GSImage(
               path: userProfileImage,
-              imageType: GSImageType.asset,
+              imageType: GSImageType.network,
               borderRadius: GSImageRadius.$full,
               size: GSImageSizes.$lg,
               fit: BoxFit.cover,

@@ -42,7 +42,7 @@ class CustomDrawerWidget extends StatelessWidget {
           GSCenter(
             child: GSImage(
               path: profileImageUrl,
-              imageType: GSImageType.asset,
+              imageType: GSImageType.network,
               borderRadius: GSImageRadius.$full,
               size: GSImageSizes.$lg,
               fit: BoxFit.cover,

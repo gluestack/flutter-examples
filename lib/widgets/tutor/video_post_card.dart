@@ -21,7 +21,7 @@ class VideoPostCard extends StatelessWidget {
         children: [
           GSImage(
             path: post.imageUrl,
-            imageType: GSImageType.asset,
+            imageType: GSImageType.network,
             fit: BoxFit.cover,
             style: GSStyle(height: 120),
           ),

@@ -17,7 +17,7 @@ class SellerDetailsReviewTab extends StatelessWidget {
               children: [
                 const GSImage(
                   path: GSStringConstants.kUserImageUrl,
-                  imageType: GSImageType.asset,
+                  imageType: GSImageType.network,
                   borderRadius: GSImageRadius.$full,
                   size: GSImageSizes.$2xs,
                   fit: BoxFit.cover,

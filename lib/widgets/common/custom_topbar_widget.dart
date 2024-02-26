@@ -103,7 +103,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
         ),
         GSImage(
           path: widget.profileImageUrl,
-          imageType: GSImageType.asset,
+          imageType: GSImageType.network,
           borderRadius: GSImageRadius.$full,
           size: GSImageSizes.$2xs,
           fit: BoxFit.cover,
@@ -132,7 +132,7 @@ class _CustomTopBarWidgetState extends State<CustomTopBarWidget> {
             path: GSTheme.of(context).brightness == Brightness.dark
                 ? GSStringConstants.kGluestackDarkLogo
                 : GSStringConstants.kGluestackLightLogo,
-            imageType: GSImageType.asset,
+            imageType: GSImageType.network,
             size: GSImageSizes.$xl,
             fit: BoxFit.fitWidth,
           ),

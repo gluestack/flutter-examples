@@ -48,7 +48,7 @@ class _UserProfileFormState extends State<UserProfileForm> {
                 children: [
                   const GSImage(
                     path: GSStringConstants.kUserImageUrl,
-                    imageType: GSImageType.asset,
+                    imageType: GSImageType.network,
                     borderRadius: GSImageRadius.$full,
                     size: GSImageSizes.$sm,
                     fit: BoxFit.cover,
